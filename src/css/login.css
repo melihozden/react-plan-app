@@ -1,0 +1,118 @@
+  .login-box{
+    position:relative;
+    margin: 150px auto;
+    width: 750px;
+    height: 500px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
+  }
+  .right-div {
+    position: relative ;
+    background-color: #029f5b; 
+    width: 400px;
+    height: 500px;
+    float: right ;
+  }
+
+  .right-div h3{
+      margin: 30px 20px 10px 20px; 
+      font-family: 'Courier New', Courier, monospace ;
+  }
+
+  .left-div{
+    width: 325px;
+    height: 500px;
+    float: left ;
+    background-color: #358efb ;
+  }
+  .title-name{
+      text-align: center ;
+  }
+  .dark-logo{
+      background-color: #333 ;
+      width: 300px; 
+      height: 300px; 
+  }
+  
+  .email-login,.email-signup{
+    position:relative;
+    float: left;
+    width: 100%;
+    height:auto;
+    margin-top: 50px;
+    text-align:center;
+  }
+  .u-form-group{
+    width:100%;
+    margin-bottom: 10px;
+    float: right ;
+  }
+  .u-form-group p{
+    font-size: 12px; 
+    text-decoration: none;
+  }
+.forgot-tag{
+    font-size: 10px; 
+    color: #0f3e79 ;
+    text-decoration: none;
+  }
+  .u-form-group label{
+      font-size: 12px; 
+  }
+  .u-form-group input[type="email"],
+  .u-form-group input[type="password"]{
+    width: 75%;
+    height:35px;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: #333;
+    font-size:0.8rem;
+    -webkit-transition:all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    transition:all 0.1s linear;
+  }
+  .u-form-group input:focus{
+    border-color: #358efb;
+  }
+  .u-form-group button{
+    width:75%;
+    background-color: rgb(28, 109, 185);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 14px 0;
+    border-radius: 2px;
+  }
+  .forgot-password{
+    width:50%;
+    float: right;
+    text-align: right;
+    margin: 7.5px; 
+    text-decoration: none;
+    color: #000;
+    font-size: 0.8rem;
+  }
+  .seperator{
+      width: 90%;
+      border: 1px solid rgba(0, 0, 0, 0.637);
+  }
+  .login-with{
+      font-size: 12px;
+  }
+  .u-form-group .google-button{
+    background-color: rgb(204, 19, 19);
+  }
+  .facebook-button{
+
+   }
+   .twitter-button{
+
+   }
