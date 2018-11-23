@@ -1,7 +1,7 @@
-  .login-box-2{
+.login-box{
     position:relative;
     margin: 150px auto;
-    width: 400px;
+    width: 750px;
     height: 500px;
     background-color: #F8F8F8;
     padding: 10px;
@@ -11,7 +11,15 @@
   box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.33);
   border-radius: 5px; 
   }
-  
+  .right-div {
+    position: relative ;
+    background-color: #F8F8F8; 
+    width: 400px;
+    height: 500px;
+    float: right ;
+    border-radius: 5px ;
+  } 
+
   .right-div h3{
       margin: 10px 20px -15px 20px; 
       font-family: 'Courier New', Courier, monospace ;
@@ -62,7 +70,7 @@
       font-size: 12px; 
   }
   .u-form-group input[type="email"],
-  .u-form-group input[type="password"]{
+  .u-form-group input[type="password"],{
     width: 75%;
     height:35px;
     outline: none;
