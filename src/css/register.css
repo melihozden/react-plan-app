@@ -89,7 +89,7 @@
   }
   .u-form-group button{
     width:75%;
-    background-color: rgb(28, 109, 185);
+    background-color: #1c6db9;
     border: none;
     outline: none;
     color: #fff;
@@ -116,7 +116,7 @@
       font-size: 12px;
   }
   .u-form-group .google-button{
-    background-color: rgb(173, 1, 0);
+    background-color: #ad0100;
     width: 110px ;
     margin: 5px ;
     height: 10%;
@@ -124,14 +124,14 @@
 
   }
   .u-form-group .facebook-button{
-    background-color: rgb(7, 55, 99);
+    background-color: #073763;
     width: 110px ;
     margin: 5px ;
     height: 10%;
     border-radius: 5px;
    }
    .u-form-group .twitter-button{
-    background-color: rgb(43, 120, 248);
+    background-color: #2b78f8;
     width: 110px ;
     margin: 5px;
     border-radius: 5px;

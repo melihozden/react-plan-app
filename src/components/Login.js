@@ -6,35 +6,38 @@ import logo2 from "../images/blacktransx.png"
 class Login extends Component {
 
   
-  state = {
-    email: '',
-    password: ''
-  };
+  // state = {
+  //   email: '',
+  //   password: ''
+  // };
 
-  handleChange = (event)=> {
+  // handleEmailChange = (e)=> {
+  //   this.setState({
+  //     email: e.target.value
+  //   });
+  // }
+  // handlePasswordChange= (e) => {
+  //   this.setState({ password: e.target.value });
+  // }
+
+  // handleSubmit = (event)=> {
+  //   alert('A name was submitted: ' + this.state.email + ' ' + this.state.password);
+  //   console.log(this.state) ;
+  //   event.preventDefault();
+  // }
+
+  handleChange = (e)=>{
     this.setState({
-      email: event.target.email,
-      password: event.target.password
-    });
+      [e.target.name] : e.target.value
+    })
   }
 
-  handleSubmit = (event)=> {
-    alert('A name was submitted: ' + this.state.email + ' ' + this.state.password);
-    console.log(this.state) ;
-    event.preventDefault();
-  }
 
     render() {
 
-
         return (
             <div className="login-box-2">
-    {/* <div className="left-div">
-        <div className="dark-logo">
-          <img className="logo-des" src={logo} alt="logo" height="50" width="75" />
-        </div>
-    </div> */}
-   
+
     <div className="right-div">
       <img className="logo-des-2" src={logo2} alt="logo" height="50" width="75" />    
       <h3 className="title-name">Welcome PlanWork</h3>
@@ -42,11 +45,11 @@ class Login extends Component {
     <form className="email-login" onSubmit={this.handleSubmit}>
 
       <div className="u-form-group">
-        <input value={this.state.email} type="email" placeholder="Email" onChange={this.handleChange}/>
+        <input type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
       </div>
 
       <div className="u-form-group">
-        <input value={this.state.password} type="password" placeholder="Password" onChange={this.handleChange}/>
+        <input type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
       </div>
 
       <div className="u-form-group">
