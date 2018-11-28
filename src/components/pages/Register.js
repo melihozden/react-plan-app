@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "../css/register.css"; 
-import logo from "../images/whitetrans2x.png"
-import logo2 from "../images/blacktransx.png"
+import "../../css/register.css"; 
+import logo from "../../images/whitetrans2x.png"
+import logo2 from "../../images/blacktransx.png"
 
 class Register extends Component {
     

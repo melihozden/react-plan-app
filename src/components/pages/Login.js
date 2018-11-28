@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "../css/login.css"
-import logo2 from "../images/blacktransx.png"
+import "../../css/login.css"
+import logo2 from "../../images/blacktransx.png"
 
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 class Login extends Component {
