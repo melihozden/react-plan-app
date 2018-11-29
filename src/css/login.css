@@ -1,6 +1,13 @@
+  body{
+    background-color: #333 ;
+    width: 100% ;
+    height: 100%;
+    margin: 0;
+    padding :0;
+  }
   .login-box-2{
     position:relative;
-    margin: 150px auto;
+    margin: 120px auto;
     width: 400px;
     height: 500px;
     background-color: #F8F8F8;

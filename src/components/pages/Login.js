@@ -37,10 +37,9 @@ class Login extends Component {
 
         return (
             <div className="login-box-2">
-
     <div className="right-div">
       <img className="logo-des-2" src={logo2} alt="logo" height="50" width="75" />    
-      <h3 className="title-name">Welcome PlanWork</h3>
+      <h3 className="title-name">Welcome to Planet App</h3>
     
     <form className="email-login" onSubmit={this.handleSubmit}>
 
@@ -59,8 +58,8 @@ class Login extends Component {
       </div>
 
       <div className="u-form-group">
-        <button>Login</button>
-        <p>Don't have an account? <a href=" " className="forgot-tag">Sign Up</a></p>
+        <button>Sign In</button>
+        <p>Don't have an account? <a href="/register" className="forgot-tag">Sign Up</a></p>
       </div>
      
       <hr className="seperator"/>
@@ -72,15 +71,9 @@ class Login extends Component {
         <button className="facebook-button"><i className="fab fa-facebook"></i> Facebook</button>
         <button className="twitter-button"><i className="fab fa-twitter"></i> Twitter</button>
       </div>
-
     </form>
-
-   
-
-
     </div>
-    
-  </div>
+          </div>
         );
     }
 }

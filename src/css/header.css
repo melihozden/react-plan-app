@@ -1,0 +1,20 @@
+.horizontal_menu{
+    text-align: center ;
+    margin : 30px auto; 
+}
+.navlink{
+    color: white;
+    text-decoration: none ;
+    margin : 10px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace ;
+}
+.navlink:hover{
+    font-weight: bold;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+}
+.mainlogo{
+    align-content: center ;
+    padding-right: 50px;
+}

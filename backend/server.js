@@ -1,10 +1,12 @@
-const express = require('express'); 
+const express = require('express') ;
+const expressGraphql = require('express-graphql') ;
 const app = express() ;
 
-app.get('/',(req,res)=>{
-    res.json() ;
-})
+
+app.use('/graphql',expressGraphql({
+
+}));
 
 app.listen(3002,()=>{
-    console.log('online') ;
-}) ;
+    console.log('app is running') ;
+})
