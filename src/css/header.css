@@ -11,8 +11,6 @@
 }
 .navlink:hover{
     font-weight: bold;
-    -webkit-transition:all 0.2s linear;
-    -moz-transition:all 0.2s linear;
 }
 .mainlogo{
     align-content: center ;

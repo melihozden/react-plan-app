@@ -35,6 +35,7 @@ class Register extends Component {
     
       handleSubmit = (e)=> {
 
+        // Authotentication soon //
         if(this.state.password === this.state.confirm){
             this.setState({
                 isConfirm : true 
