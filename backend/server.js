@@ -2,11 +2,12 @@ const express = require('express') ;
 const expressGraphql = require('express-graphql') ;
 const app = express() ;
 
+const portNum = 3002 ;
 
 app.use('/graphql',expressGraphql({
 
 }));
 
-app.listen(3002,()=>{
-    console.log('app is running') ;
+app.listen(portNum,()=>{
+    console.log('Backend is processing at port: '+portNum) ;
 })

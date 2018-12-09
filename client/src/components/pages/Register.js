@@ -11,30 +11,12 @@ class Register extends Component {
         confirm : '',
         isConfirm : false
       };
-    
       handleChange = (event)=> {
         this.setState({
            [event.target.name] : event.target.value
         });
-
-
-
     }
-      
-      // handleEmailChange = (e)=> {
-      //   this.setState({
-      //     email: e.target.value
-      //   });
-      // }
-      // handlePasswordChange= (e) => {
-      //   this.setState({ password: e.target.value });
-      // }
-      // handleConfirmChange= (e) => {
-      //   this.setState({ confirm: e.target.value });
-      // }
-    
       handleSubmit = (e)=> {
-
         // Authotentication soon //
         if(this.state.password === this.state.confirm){
             this.setState({
