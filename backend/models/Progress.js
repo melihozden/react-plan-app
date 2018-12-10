@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const inProgressSchema = new Schema({
+const progressSchema = new Schema({
 	userId: {
 		type: Schema.ObjectId,
 		required :true
 	},
-	inProgressPlan: {
+	progressPlan: {
 		type: String,
 		required: true
 	},
@@ -16,4 +16,4 @@ const inProgressSchema = new Schema({
 	}
 });
 
-module.exports = mongoose.model('inProgress', inProgressSchema);
+module.exports = mongoose.model('progress', progressSchema);

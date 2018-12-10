@@ -1,0 +1,20 @@
+type Query{
+    done(id: ID!): Done!
+    dones: [Done!]!
+}
+
+type Done{
+    id: ID!
+    donePlan: String!
+    createdAt: String!
+    user: User!
+}
+
+type Mutation {
+    createDone(data: CreateDoneInput): Done
+}
+
+input CreateDoneInput {
+    donePlan: String!
+    userId: ID!
+}

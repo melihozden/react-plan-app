@@ -1,0 +1,20 @@
+type Query{
+    progress(id: ID!): Progress!
+    progresses: [Progress!]!
+}
+
+type Progress{
+    id: ID!
+    progressPlan: String!
+    createdAt: String!
+    user: User!
+}
+
+type Mutation {
+    createProgress(data: CreateProgressInput): Progress
+}
+
+input CreateProgressInput {
+    progressPlan: String!
+    userId: ID!
+}

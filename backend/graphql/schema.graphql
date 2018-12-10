@@ -4,3 +4,9 @@
 # import Query from './types/todo.graphql'
 # import Mutation from './types/todo.graphql'
 
+# import Query from './types/progress.graphql'
+# import Mutation from './types/progress.graphql'
+
+# import Query from './types/done.graphql'
+# import Mutation from './types/done.graphql'
+
