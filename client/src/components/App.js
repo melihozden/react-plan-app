@@ -22,6 +22,7 @@ const Root = () =>(
       <Route path="/login" component = {Login}/>
       <Route path="/register" component={Register}/>
       <Redirect to="/login"/>
+      {/*<Home/>   if everything goes correct (user logged in completely) */}   
     </Switch>
       </Fragment>
   </Router>
