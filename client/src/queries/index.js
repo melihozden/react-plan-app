@@ -11,6 +11,14 @@ mutation($email:String! $password:String!) {
 }
 `
 
+export const SIGNIN_USER = gql`
+mutation($email:String! $password:String!) {
+  signIn(data: { email: $email, password: $password }) {
+    token
+  }
+}
+`
+
 
 
 

@@ -7,19 +7,23 @@ import logo2 from "../../images/blacktransx.png"
 import registerwall from '../../images/building.png'
 
 import { Mutation } from 'react-apollo';
-//
+//queries 
 import { CREATE_USER } from '../../queries/index';
 
 //error
 import Error from '../Error';
 
+const initialState = {
+    email: '',
+    password: '',
+    confirm: '',
+    isConfirm : false
+}
+
 class Register extends Component {
     
     state = {
-        email: '',
-        password: '',
-        confirm: '',
-        isConfirm : false
+      ...initialState
       };
       handleChange = (event)=> {
         this.setState({
@@ -28,10 +32,26 @@ class Register extends Component {
     }
       handleSubmit = (e, createUser)=> {
         e.preventDefault();
-        createUser().then(data=>console.log(data))
+        createUser().then(({data})=>{
+          console.log(data)
+          localStorage.setItem('token',data.createUser.token)
+          this.resetState()
+        })
       }
+      formValidate = () =>{
+      const {email,password,confirm} = this.state ;
+      // null email,password,confirm also password must equals to confirm
+        return (!email || !password || !confirm || password !== confirm)
+      }
+
+      resetState = () =>{
+        this.setState({
+          ...initialState
+        })
+      } 
+
     render() {
-      const {email,password} = this.state ;
+      const {email,password,confirm} = this.state ;
         return (
             <div className="login-box">
             
@@ -52,19 +72,19 @@ class Register extends Component {
        {loading && <div>loading...</div>}
        {error && <Error error={error} />}
        <div className="u-form-group">
-         <input type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
+         <input value={email} type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
+         <input value={password} type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input type="password" name="confirm" placeholder="Confirm Password" onChange={this.handleChange} autoComplete="true"/>
+         <input value={confirm} type="password" name="confirm" placeholder="Confirm Password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <button>Sign Up</button><br/><br/>
+         <button disabled={loading || this.formValidate()}>Sign Up</button><br/><br/>
          <p>Already have an account? <a href="/login" className="forgot-tag">Sign In</a></p>          
        </div>
       

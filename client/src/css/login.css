@@ -96,7 +96,9 @@
     font-weight: normal;
     padding: 14px 0;
     border-radius: 5px;
-    
+  }
+  .u-form-group button:hover{
+    cursor: pointer
   }
   .forgot-password{
     width:50%;
