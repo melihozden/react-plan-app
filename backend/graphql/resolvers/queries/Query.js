@@ -6,7 +6,8 @@ const Query = {
 		return await User.find({}).sort({ 'createdAt': 'desc'})
 	},
 	activeUser: async (parent, args, { activeUser, User }) => {
-		return await User.findone({ email : activeUser.email })
+		if(!activeUser) return null
+		return await User.findOne({ email : activeUser.email })
 	},
 	todo: async (parent, args, { Todo }) => {
 		return await Todo.findById(args.id);

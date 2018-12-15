@@ -1,6 +1,7 @@
 .horizontal_menu{
-    text-align: center ;
-    margin : 30px auto; 
+    text-align: right ;
+    margin : 30px; 
+    padding-bottom: 30px;
 }
 .navlink{
     color: white;
@@ -14,5 +15,15 @@
 }
 .mainlogo{
     align-content: center ;
-    padding-right: 50px;
+    float: left;
+}
+
+.activeNavLink{
+    color: white;
+    text-decoration: none ;
+    margin : 10px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace ;
+    float: right;
 }

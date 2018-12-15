@@ -7,6 +7,7 @@ import logo2 from "../../images/blacktransx.png"
 import registerwall from '../../images/building.png'
 
 import { Mutation } from 'react-apollo';
+import { withRouter } from 'react-router-dom';
 //queries 
 import { CREATE_USER } from '../../queries/index';
 
@@ -32,10 +33,12 @@ class Register extends Component {
     }
       handleSubmit = (e, createUser)=> {
         e.preventDefault();
-        createUser().then(({data})=>{
+        createUser().then(async({data})=>{
           console.log(data)
           localStorage.setItem('token',data.createUser.token)
+           await this.props.refetch() ;
           this.resetState()
+          this.props.history.push('/profile')
         })
       }
       formValidate = () =>{
@@ -109,4 +112,4 @@ class Register extends Component {
     }
 }
 
-export default Register;
+export default withRouter(Register);

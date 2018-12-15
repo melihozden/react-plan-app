@@ -4,6 +4,7 @@ import logo2 from "../../images/blacktransx.png"
 
 // import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { Mutation } from 'react-apollo';
+import { withRouter } from 'react-router-dom';
 //queries 
 import { SIGNIN_USER } from '../../queries/index';
 // error component
@@ -26,10 +27,12 @@ class Login extends Component {
   }
   handleSubmit = (e, signinUser)=> {
     e.preventDefault();
-    signinUser().then(({data})=>{
+    signinUser().then(async({data})=>{
       console.log(data)
       localStorage.setItem('token',data.signIn.token)
+      await this.props.refetch() ;
       this.resetState()
+      this.props.history.push('/profile');
     })
   }
   formValidate = () =>{
@@ -95,4 +98,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);

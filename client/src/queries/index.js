@@ -18,6 +18,18 @@ mutation($email:String! $password:String!) {
   }
 }
 `
+export const GET_ACTIVE_USER = gql`
+query{
+  activeUser{
+    email
+    createdAt
+    todos{
+      todoPlan
+    }
+  }
+}
+`
+
 
 
 
