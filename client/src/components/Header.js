@@ -9,27 +9,25 @@ const  Header = ({session})=> {
         return (
             <div className="horizontal_menu">
                  <img className="mainlogo" src={mainlogo} alt="logo" height="35" width="60" />  
-
                 {
                     session.activeUser ? <LinkWithLogin session={session} /> : <LinkWithUnLogin />
                 }
             </div>
         );
     }
-    
     const LinkWithLogin = ({session}) =>(
         <Fragment>
-         <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.email}</NavLink>
-         <Logout/>
-    </Fragment>   
+            <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.email}</NavLink>
+            <Logout/>
+        </Fragment>   
 )
 
-const LinkWithUnLogin = () =>(
-    <Fragment>  
-         <NavLink className="navlink" to="/">Home</NavLink>
-         <NavLink className="navlink" to="/login">SignIn</NavLink>
-         <NavLink className="navlink" to="/register">SignUp</NavLink>
-    </Fragment>
+    const LinkWithUnLogin = () =>(
+        <Fragment>  
+            <NavLink className="navlink" to="/">Home</NavLink>
+            <NavLink className="navlink" to="/login">SignIn</NavLink>
+            <NavLink className="navlink" to="/register">SignUp</NavLink>
+        </Fragment>
 
 )
 

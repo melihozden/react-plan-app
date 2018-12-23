@@ -1,7 +1,8 @@
 import React from 'react';
 import {ApolloConsumer} from 'react-apollo';
-
+import '../css/profile.css';
 import { withRouter } from 'react-router-dom';
+import '../css/logout.css' ;
 
 const onClick = (history,client) =>{
     localStorage.removeItem('token','');
@@ -14,7 +15,7 @@ const logout = ({history}) =>(
     {
         (client) =>{
             // console.log(client)
-            return <button onClick={()=>onClick(history,client)}>Logout</button>
+            return <button className="logout-button" onClick={()=>onClick(history,client)}>logout</button>
         }
     }
     </ApolloConsumer>

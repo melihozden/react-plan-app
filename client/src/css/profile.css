@@ -1,0 +1,13 @@
+.outdiv{
+    width: 30.5% ;
+    height: 625px;
+    background-color: #eef2f3;
+    margin: 35px 10px ;
+    border-radius: 5px;
+    display: inline-block;
+    /* margin-left: 75% ; */
+    padding: 10px;
+    font-size: 16px;
+    font-weight:bold; 
+    color : gray; 
+}

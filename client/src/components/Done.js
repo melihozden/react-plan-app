@@ -5,7 +5,7 @@ class Todo extends Component {
     render() {
         return (
             <div className="outdiv">
-               Todo Section
+               Done Section
             </div>
         );
     }
