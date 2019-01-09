@@ -26,11 +26,55 @@ query{
     todos{
       todoPlan
     }
+    # progresses{
+    #   progressPlan
+    # }
+    # dones{
+    #   donePlan
+    # }
+  }
+}`
+
+// Profile Todo
+export const GET_TODOS = gql`
+query {
+  todos{
+    id
+  	todoPlan
+    createdAt
+    user{
+      id 
+      email
+    }
   }
 }
 `
-
-
+export const GET_INPROGRESS = gql`
+query {
+  progresses{
+    id
+  	progressPlan
+    createdAt
+    user{
+      id 
+      email
+    }
+  }
+}
+`
+export const GET_DONE = gql`
+query {
+  dones{
+    id
+  	donePlan
+    createdAt
+    user{
+      id 
+      email
+    }
+  }
+}
+`
 
 
 

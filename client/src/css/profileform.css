@@ -1,0 +1,18 @@
+
+
+.form-button{
+    border: none; 
+    background-color: transparent;
+}
+.todo-input{
+    width: 75% ;
+    height: 30px;
+    font-size:14px;
+    margin: 10px 40px 10px 30px;
+    padding-left: 10px;
+    border: 0px solid gray;
+    border-bottom-width: 1px;
+    background-color: transparent;
+}
+
+

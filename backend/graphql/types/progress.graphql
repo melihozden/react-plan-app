@@ -1,3 +1,4 @@
+scalar Date
 type Query{
     progress(id: ID!): Progress!
     progresses: [Progress!]!
@@ -6,7 +7,7 @@ type Query{
 type Progress{
     id: ID!
     progressPlan: String!
-    createdAt: String!
+    createdAt: Date!
     user: User!
 }
 

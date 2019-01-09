@@ -4,10 +4,35 @@
     background-color: #eef2f3;
     margin: 35px 10px ;
     border-radius: 5px;
-    display: inline-block;
+    display: inline-table;
     /* margin-left: 75% ; */
     padding: 10px;
     font-size: 16px;
     font-weight:bold; 
     color : gray; 
+}
+
+.ul-field{
+    list-style: none;
+    margin : 0px; 
+    padding: 0px;
+}
+.text{
+    color : black;
+    width: 90%;
+    padding : 10px;
+    margin: 10px;
+    background-color: rgb(204, 204, 204);
+    border: none;
+    border-radius: 5px;
+}
+.text:hover{
+    cursor: all-scroll;
+}
+.date{
+    float: right;
+    font-size: 13px;
+}
+.post{
+    text-align: center
 }

@@ -4,6 +4,9 @@ import Progress from '../Progress';
 import Done from '../Done';
 import Moment from 'react-moment';
 
+// import { Query } from 'react-apollo';
+// import {GET_TODOS, GET_INPROGRESS, GET_DONE} from '../../queries/index'
+
 import auth from '../auth';
 const style = {
     color: "white",
