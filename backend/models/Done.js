@@ -6,7 +6,7 @@ const doneSchema = new Schema({
 		type: Schema.ObjectId,
 		required :true
 	},
-	inProgressPlan: {
+	donePlan: {
 		type: String,
 		required: true
 	},

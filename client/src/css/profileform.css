@@ -14,5 +14,7 @@
     border-bottom-width: 1px;
     background-color: transparent;
 }
-
+.todo-input:focus{
+    outline: none
+}
 

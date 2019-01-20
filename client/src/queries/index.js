@@ -25,13 +25,16 @@ query{
     createdAt
     todos{
       todoPlan
+      createdAt
     }
-    # progresses{
-    #   progressPlan
-    # }
-    # dones{
-    #   donePlan
-    # }
+    progresses{
+      progressPlan
+      createdAt
+    }
+    dones{
+      donePlan
+      createdAt
+    }
   }
 }`
 

@@ -25,7 +25,7 @@ class Todo extends Component {
                                     <li key={todos.id} className="li-field">
                                         <div className="text">{todos.todoPlan}
                                             <div className="date">
-                                                <Moment fromNow>{todos.createdAt}</Moment>
+                                            <Moment fromNow>{todos.createdAt}</Moment>
                                             </div>
                                         </div>
                                     </li>

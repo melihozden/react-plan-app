@@ -12,6 +12,8 @@ type User{
     email: String!
     createdAt: Date
     todos: [Todo!]!
+    progresses: [Progress!]!
+    dones: [Done!]!
 }
 
 type Mutation {
