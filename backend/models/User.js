@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
+	fullname: {
+		type: String,
+		required: true
+	},
 	email: {
 		type: String,
 		unique: true,
@@ -12,13 +16,18 @@ const userSchema = new Schema({
 		type: String,
 		required: true
 	},
+	isValid:{
+		type: Boolean,
+		required : true,
+		default : 0
+	},
 	createdAt: {
 		type: Date,
 		default: Date.now
 	}
 });
 
-userSchema.pre('save', function(next) {
+userSchema.pre('save',next => {
 	if (!this.isModified('password')) {
 	  return next()
 	}

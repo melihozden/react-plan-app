@@ -15,9 +15,13 @@ const style = {
 const Profile = ({session}) => (
             <div>
                 <div style={style}>
-                    {session.activeUser.email} <br/>
+                    "Welcome {session.activeUser.fullname}" <br/>
                     Created At : <Moment date={session.activeUser.createdAt} format="DD/MM/YYYY"/>
                 </div>
+
+                {/* */}
+
+
                     <Todo/>
                     <Progress/>
                     <Done/>

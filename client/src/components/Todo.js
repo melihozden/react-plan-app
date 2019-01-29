@@ -18,14 +18,14 @@ class Todo extends Component {
                         if(error) return <div>Todo Error</div>
                         console.log(data)
                        return (
-                        <ul className="ul-field">
+                        <ul className="ul-field" id="ul-deger">
                             {
-                               
+                               // https://yuilibrary.com/yui/docs/dd/scroll-list.html
                                 data.activeUser.todos.map(todos =>(
                                     <li key={todos.id} className="li-field">
                                         <div className="text">{todos.todoPlan}
                                             <div className="date">
-                                            <Moment fromNow>{todos.createdAt}</Moment>
+                                                <Moment fromNow>{todos.createdAt}</Moment>
                                             </div>
                                         </div>
                                     </li>

@@ -17,7 +17,7 @@ const  Header = ({session})=> {
     }
     const LinkWithLogin = ({session}) =>(
         <Fragment>
-            <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.email}</NavLink>
+            <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.fullname}</NavLink>
             <Logout/>
         </Fragment>   
 )

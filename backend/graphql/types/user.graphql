@@ -9,6 +9,7 @@ type Query{
 
 type User{
     id: ID!
+    fullname: String!
     email: String!
     createdAt: Date
     todos: [Todo!]!
@@ -22,6 +23,7 @@ type Mutation {
 }
 
 input CreateUserInput{
+    fullname: String!
     email: String!
     password: String!
 }

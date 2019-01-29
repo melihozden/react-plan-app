@@ -4,7 +4,8 @@ import "../../css/register.css";
 
 //images and logos
 import logo2 from "../../images/blacktransx.png"
-import registerwall from '../../images/building.png'
+
+import registerwall from '../../images/hotballoon.jpg'
 
 import { Mutation } from 'react-apollo';
 import { withRouter } from 'react-router-dom';
@@ -15,6 +16,7 @@ import { CREATE_USER } from '../../queries/index';
 import Error from '../Error';
 
 const initialState = {
+    fullname: '',
     email: '',
     password: '',
     confirm: '',
@@ -42,9 +44,9 @@ class Register extends Component {
         })
       }
       formValidate = () =>{
-      const {email,password,confirm} = this.state ;
+      const {fullname,email,password,confirm} = this.state ;
       // null email,password,confirm also password must equals to confirm
-        return (!email || !password || !confirm || password !== confirm)
+        return (!fullname || !email || !password || !confirm || password !== confirm)
       }
 
       resetState = () =>{
@@ -54,7 +56,7 @@ class Register extends Component {
       } 
 
     render() {
-      const {email,password,confirm} = this.state ;
+      const {fullname,email,password,confirm} = this.state ;
         return (
             <div className="login-box">
             
@@ -66,7 +68,7 @@ class Register extends Component {
       <img className="logo-des-2" src={logo2} alt="logo" height="50" width="75" />    
       <h3 className="title-name">Welcome to Planet App</h3>
     
-    <Mutation mutation={CREATE_USER} variables={{email,password}}>
+    <Mutation mutation={CREATE_USER} variables={{fullname,email,password}}>
     {(createUser,{loading,error}) =>(
        <form className="email-login" onSubmit={(e)=>{
          this.handleSubmit(e,createUser)
@@ -74,6 +76,10 @@ class Register extends Component {
 
        {loading && <div>loading...</div>}
        {error && <Error error={error} />}
+       <div className="u-form-group">
+         <input value={fullname} type="text" name="fullname" placeholder="Full Name" onChange={this.handleChange} autoComplete="true"/>
+       </div>
+
        <div className="u-form-group">
          <input value={email} type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
        </div>
