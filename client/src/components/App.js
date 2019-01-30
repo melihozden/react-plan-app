@@ -23,8 +23,8 @@ const Root = ({refetch,session}) =>(
       {/* <Link to="/login">Login</Link><br/><br/>
       <Link to="/register">Register</Link> */}
       <Route path="/login" render = { () => <Login refetch={refetch}/>}/>
-      <Route path="/register" render={ ()=> <Register refetch={refetch}/>}/>
-      <Route path="/profile" render={() => <Profile session={session} />}/>
+      <Route path="/register" render={ () => <Register refetch={refetch}/>}/>
+      <Route path="/profile" render={ () => <Profile session={session} />}/>
       <Redirect to="/login"/>
       {/*<Home/>   if everything goes correct (user logged in completely) */}   
     </Switch>

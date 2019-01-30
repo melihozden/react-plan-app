@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = props => {
     const {message} = props.error
-    console.log(props)
+    // console.log(props)
     return (
         <div>
             {message}

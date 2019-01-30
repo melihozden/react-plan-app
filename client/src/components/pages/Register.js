@@ -70,30 +70,30 @@ class Register extends Component {
     
     <Mutation mutation={CREATE_USER} variables={{fullname,email,password}}>
     {(createUser,{loading,error}) =>(
-       <form className="email-login" onSubmit={(e)=>{
+       <form className="email-signup" onSubmit={(e)=>{
          this.handleSubmit(e,createUser)
-       }}>
+        }}>
 
        {loading && <div>loading...</div>}
-       {error && <Error error={error} />}
+        {error && <Error error={error} />}
        <div className="u-form-group">
-         <input value={fullname} type="text" name="fullname" placeholder="Full Name" onChange={this.handleChange} autoComplete="true"/>
+         <input className="fullname" value={fullname} type="text" name="fullname" placeholder="Full Name" onChange={this.handleChange} autoComplete="true"/>
        </div>
 
        <div className="u-form-group">
-         <input value={email} type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
+         <input className="email" value={email} type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input value={password} type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
+         <input className="password" value={password} type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input value={confirm} type="password" name="confirm" placeholder="Confirm Password" onChange={this.handleChange} autoComplete="true"/>
+         <input className="confirm" value={confirm} type="password" name="confirm" placeholder="Confirm Password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <button disabled={loading || this.formValidate()}>Sign Up</button><br/><br/>
+         <button disabled={loading || this.formValidate()}>Sign Up</button>
          <p>Already have an account? <a href="/login" className="forgot-tag">Sign In</a></p>          
        </div>
       

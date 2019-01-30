@@ -24,9 +24,11 @@ const  Header = ({session})=> {
 
     const LinkWithUnLogin = () =>(
         <Fragment>  
-            <NavLink className="navlink" to="/">Home</NavLink>
-            <NavLink className="navlink" to="/login">SignIn</NavLink>
-            <NavLink className="navlink" to="/register">SignUp</NavLink>
+            <div className="rightLoginRegister">
+                {/* <NavLink className="navlink" to="/">Home</NavLink> */}
+                <NavLink className="navlink-login" to="/login">Login</NavLink>
+                <NavLink className="navlink-register" to="/register">Register</NavLink>
+             </div>
         </Fragment>
 
 )
