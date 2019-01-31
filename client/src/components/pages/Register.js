@@ -1,14 +1,17 @@
+//react 
 import React, { Component } from 'react';
+import { Mutation } from 'react-apollo';
+import { withRouter } from 'react-router-dom';
+
+//css
 import "../../css/register.css"; 
-// import logo from "../../images/whitetrans2x.png"
 
 //images and logos
 import logo2 from "../../images/blacktransx.png"
+import registerwall from '../../images/building.png'
+// import logo from "../../images/whitetrans2x.png"
 
-import registerwall from '../../images/hotballoon.jpg'
 
-import { Mutation } from 'react-apollo';
-import { withRouter } from 'react-router-dom';
 //queries 
 import { CREATE_USER } from '../../queries/index';
 
@@ -93,8 +96,8 @@ class Register extends Component {
        </div>
  
        <div className="u-form-group">
-         <button disabled={loading || this.formValidate()}>Sign Up</button>
-         <p>Already have an account? <a href="/login" className="forgot-tag">Sign In</a></p>          
+         <button disabled={loading || this.formValidate()}>Register</button>
+         <p>Already have an account? <a href="/login" className="forgot-tag">Login</a></p>          
        </div>
       
  
@@ -103,9 +106,9 @@ class Register extends Component {
        <p className="login-with">-Or sign up with-</p>
       
        <div className="u-form-group">
-         <button className="google-button"><i className="fab fa-google-plus-g"></i>Google+</button>
-         <button className="facebook-button"><i className="fab fa-facebook"></i> Facebook</button>
-         <button className="twitter-button"><i className="fab fa-twitter"></i> Twitter</button>
+         <button className="google-button"><i className="fab fa-google-plus-g fa-2x"></i></button>
+         <button className="facebook-button"><i className="fab fa-facebook fa-2x"></i></button>
+         <button className="twitter-button"><i className="fab fa-twitter fa-2x"></i></button>
        </div>
      </form>
     )}

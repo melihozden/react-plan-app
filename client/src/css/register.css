@@ -46,13 +46,10 @@
   /* background-color: #191817;  */
     border-radius: 2px ;
   }
-  .logo-des{
-    margin: 30px 10px 30px 145px; 
-  }
   .logo-des-2{
-    margin: 10px 20px 10px 162.5px; 
-    align-items: center ;
+    margin: 0px 10px 0px 170px; 
   }
+ 
   .email-login, .email-signup{
     position:relative;
     float: left;
@@ -63,15 +60,9 @@
   .u-form-group{
     width:100%;
     margin-bottom: 6px;
-    float: right ;
   }
   .u-form-group p{
-    font-size: 12px; 
-    text-decoration: none;
-  }
-.forgot-tag{
-    font-size: 10px; 
-    color: #0f3e79 ;
+    font-size: 13px; 
     text-decoration: none;
   }
   .u-form-group label{
@@ -90,25 +81,6 @@
     -moz-transition:all 0.1s linear;
     transition:all 0.1s linear;
   }
-  /* .u-form-group input[type="text"],
-  .u-form-group input[type="email"],
-  .u-form-group input[type="password"],{
-    width: 75%;
-    height:35px;
-    outline: none;
-    border: 1px solid #ddd;
-    padding: 0 10px;
-    border-radius: 2px;
-    color: #333;
-    font-size:0.8rem;
-    -webkit-transition:all 0.1s linear;
-    -moz-transition:all 0.1s linear;
-    transition:all 0.1s linear;
-  } */
-  /* .u-form-group input:focus{
-    border-color: #358efb;
-    border-radius: 10px ;
-  } */
   .u-form-group button{
     width:75%;
     background-color: #1c6db9;
@@ -123,15 +95,9 @@
   .u-form-group button:hover{
     cursor: pointer
   }
-
-  .forgot-password{
-    width:50%;
-    float: right;
-    text-align: right;
-    margin: 7.5px; 
-    text-decoration: none;
-    color: #000;
-    font-size: 0.8rem;
+  .forgot-tag{
+    font-size: 13px; 
+    color: #073763;
   }
   .seperator{
       width: 90%;
@@ -142,26 +108,26 @@
   }
   .u-form-group .google-button{
     background-color: #ad0100;
-    width: 110px ;
-    margin: 5px ;
+    width: 60px ;
+    margin: 10px ;
     height: 10%;
-    border-radius: 5px;
-
+    border-radius: 30px;
   }
   .u-form-group .facebook-button{
     background-color: #073763;
-    width: 110px ;
-    margin: 5px ;
+    width: 60px ;
+    margin: 10px ;
     height: 10%;
-    border-radius: 5px;
+    border-radius: 30px;   
    }
    .u-form-group .twitter-button{
     background-color: #2b78f8;
-    width: 110px ;
-    margin: 5px;
-    border-radius: 5px;
+    width: 60px ;
+    margin: 10px;
+    height: 10%;
+    border-radius: 30px;
+    
    }
-
    .u-form-group .google-button:hover{
     border-radius: 15px;
     cursor: pointer;

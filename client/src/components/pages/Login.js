@@ -50,8 +50,8 @@ class Login extends Component {
       const {email,password} = this.state ;
         return (
             <div className="login-box-2">
-    <div className="right-div">
-      <img className="logo-des-2" src={logo2} alt="logo" height="50" width="75" />    
+    <div className="login-div">
+      <img className="logo-des" src={logo2} alt="logo" height="50" width="75" />    
       <h3 className="title-name">Welcome to Planet App</h3>
     <Mutation mutation={SIGNIN_USER} variables={{email,password}}>
           {(signinUser,{loading,error})=>(
@@ -84,9 +84,9 @@ class Login extends Component {
               <p className="login-with">-Or connect with-</p>
 
               <div className="u-form-group">
-                <button className="google-button"><i className="fab fa-google-plus-g"></i>Google+</button>
-                <button className="facebook-button"><i className="fab fa-facebook"></i> Facebook</button>
-                <button className="twitter-button"><i className="fab fa-twitter"></i> Twitter</button>
+                <button className="google-button"><i className="fab fa-google-plus-g fa-2x"></i></button>
+                <button className="facebook-button"><i className="fab fa-facebook fa-2x"></i></button>
+                <button className="twitter-button"><i className="fab fa-twitter fa-2x"></i></button>
               </div>
 </form>
           )}
