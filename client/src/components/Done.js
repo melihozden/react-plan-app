@@ -10,8 +10,10 @@ class Todo extends Component {
     render() {
         return (
             <div className="outdiv">
-               Done Section
-               <ProfileForm text3="done"/>
+                <div className="div-header">
+               <span className="quantity">{this.props.quantity}</span> Progress Section
+                    <button className="form-button"><i className="fas fa-plus fa-2x"></i></button>
+            </div>
                <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
@@ -32,7 +34,6 @@ class Todo extends Component {
                                 )
                                 )
                             }
-                            <div className="post">{data.activeUser.dones.length} done(s)</div>
                         </ul>
                        )
                     }

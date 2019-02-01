@@ -1,21 +1,11 @@
-
-.logout-button{
-    background-color: orange ;
+.settings-button{
+    background-color: red ;
     border : none ; 
     width: 100px;
     height: 30px;
-    margin: 5px;
     font-size: 14px; 
     border-radius: 5px;
     font-weight: bold;
     font-family: monospace;
+    display: inline;
 }
-
-
-
-
-
-
-
-
-

@@ -9,16 +9,27 @@ import { withRouter } from 'react-router-dom';
 import { SIGNIN_USER } from '../../queries/index';
 // error component
 import Error  from '../Error';
+import { Button, Header, Image, Modal } from 'semantic-ui-react'
+
 const initialState = {
   email: '',
   password: '',
 }
+const modalState = {
+  modalOpen: false
+}
+
 
 class Login extends Component {
 
   state = {
-    ...initialState
+    ...initialState,
+    ...modalState
   };
+
+  handleOpen = () => this.setState({ modalOpen: true })
+
+  handleClose = () => this.setState({ modalOpen: false })
   
   handleChange = (e)=>{
     this.setState({
@@ -49,7 +60,7 @@ class Login extends Component {
     render() {
       const {email,password} = this.state ;
         return (
-            <div className="login-box-2">
+  <div className="login-box-2">
     <div className="login-div">
       <img className="logo-des" src={logo2} alt="logo" height="50" width="75" />    
       <h3 className="title-name">Welcome to Planet App</h3>

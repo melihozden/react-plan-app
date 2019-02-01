@@ -14,6 +14,7 @@ import {
   import Register from './pages/Register';
   import Profile from './pages/Profile';
   import Header from './Header';
+  import Footer from './Footer';
   
 const Root = ({refetch,session}) =>(
 <Router>
@@ -28,6 +29,7 @@ const Root = ({refetch,session}) =>(
       <Redirect to="/login"/>
       {/*<Home/>   if everything goes correct (user logged in completely) */}   
     </Switch>
+      <Footer/>
       </Fragment>
   </Router>
 )

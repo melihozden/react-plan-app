@@ -1,7 +1,7 @@
 .outdiv{
     width: 30.5% ;
     height: 650px;
-    background-color: #eef2f3;
+    background-color: rgb(231,233,235);
     margin: 35px 10px ;
     border-radius: 5px;
     display: inline-table;
@@ -16,17 +16,17 @@
     list-style: none;
     margin : 0px; 
     padding: 0px;
-    overflow-y: auto
+    overflow: auto!important;
 }
 .text{
     color : black;
     width: 90%;
-    padding : 10px;
+    padding : 15px;
     margin: 10px;
     background-color: rgba(57, 159, 255, 0.486);
+    box-shadow: 2px 2px rgb(223,225,227);
     border: none;
     border-radius: 5px;
-    overflow: auto;
 }
 .text:hover{
     cursor: all-scroll;
@@ -37,5 +37,23 @@
     color: #0D0D4B;
 }
 .post{
-    text-align: center
+    text-align: left
 }
+.div-header{
+margin-bottom: 20px;
+}
+.form-button{
+    border: none; 
+    float: right;
+    background-color: transparent;
+}
+.quantity{
+    background: rgb(207, 210,212); 
+    border-radius: 50%;
+    color: rgb(64, 70, 74);
+    margin-right: 5px;
+    padding : 5px;
+    font-size: 14px;
+}
+
+

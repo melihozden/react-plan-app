@@ -4,6 +4,7 @@ import mainlogo from '../images/whitetrans2x.png';
 //css 
 import '../css/header.css';
 import Logout from './Logout'
+import Settings from './Settings'
 const  Header = ({session})=> {
     //console.log(session)
         return (
@@ -19,6 +20,7 @@ const  Header = ({session})=> {
         <Fragment>
             <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.fullname}</NavLink>
             <Logout/>
+            {/* <Settings/> */}
         </Fragment>   
 )
 

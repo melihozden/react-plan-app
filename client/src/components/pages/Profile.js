@@ -10,7 +10,8 @@ import Moment from 'react-moment';
 import auth from '../auth';
 const style = {
     color: "white",
-    marginLeft: "35px"
+    marginTop: "10px",
+    marginLeft: "20px"
 }
 const Profile = ({session}) => (
             <div>
@@ -22,9 +23,9 @@ const Profile = ({session}) => (
                 {/* */}
 
 
-                    <Todo/>
-                    <Progress/>
-                    <Done/>
+                    <Todo quantity={session.activeUser.todos.length} />
+                    <Progress quantity={session.activeUser.progresses.length} />
+                    <Done quantity={session.activeUser.dones.length} />
             </div>
 );
 export default auth(session => session && session.activeUser)(Profile);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/profile.css';
-import ProfileForm from '../components/ProfileForm' ;
+// import ProfileForm from '../components/ProfileForm' ;
 import Moment from 'react-moment';
 import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index'
@@ -9,8 +9,10 @@ class Todo extends Component {
     render() {
         return (
             <div className="outdiv">
-               Todo Section
-                <ProfileForm text1="todo"/>
+            <div className="div-header">
+               <span className="quantity">{this.props.quantity}</span> Todo Section
+                    <button className="form-button"><i className="fas fa-plus fa-2x"></i></button>
+            </div>
             <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
@@ -32,7 +34,6 @@ class Todo extends Component {
                                 )
                                 )
                             }
-                            <div className="post">{data.activeUser.todos.length} todo(s)</div>
                         </ul>
                        )
                     }
