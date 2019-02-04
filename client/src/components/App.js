@@ -29,7 +29,7 @@ const Root = ({refetch,session}) =>(
       <Redirect to="/login"/>
       {/*<Home/>   if everything goes correct (user logged in completely) */}   
     </Switch>
-      <Footer/>
+      {/* <Footer/> */}
       </Fragment>
   </Router>
 )

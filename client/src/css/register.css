@@ -112,6 +112,8 @@
     margin: 10px ;
     height: 10%;
     border-radius: 30px;
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
   }
   .u-form-group .facebook-button{
     background-color: #073763;
@@ -119,6 +121,8 @@
     margin: 10px ;
     height: 10%;
     border-radius: 30px;   
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
    }
    .u-form-group .twitter-button{
     background-color: #2b78f8;
@@ -126,23 +130,22 @@
     margin: 10px;
     height: 10%;
     border-radius: 30px;
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
     
    }
    .u-form-group .google-button:hover{
     border-radius: 15px;
     cursor: pointer;
-    -webkit-transition:all 0.2s linear;
-    -moz-transition:all 0.2s linear;
+    
   }
   .u-form-group .facebook-button:hover{
     border-radius: 15px;
     cursor: pointer;
-    -webkit-transition:all 0.2s linear;
-    -moz-transition:all 0.2s linear;
+    
   }
   .u-form-group .twitter-button:hover{
     border-radius: 15px;
     cursor: pointer;
-    -webkit-transition:all 0.2s linear;
-    -moz-transition:all 0.2s linear;
+    
   }

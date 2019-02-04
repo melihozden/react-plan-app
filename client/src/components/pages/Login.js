@@ -72,11 +72,11 @@ class Login extends Component {
                {loading && <div>loading...</div>}
                {error && <Error error={error} />}
               <div className="u-form-group">
-                <input value={email}  type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
+                <input value={email}  type="email" name="email" placeholder="abc@example.com" onChange={this.handleChange} autoComplete="true"/>
               </div>
 
               <div className="u-form-group">
-                <input value={password}  type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
+                <input value={password}  type="password" name="password" placeholder="Enter your password" onChange={this.handleChange} autoComplete="true"/>
               </div>
 
               <div className="u-form-group">

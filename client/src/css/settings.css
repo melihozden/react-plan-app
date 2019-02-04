@@ -1,11 +1,13 @@
+
 .settings-button{
-    background-color: red ;
-    border : none ; 
-    width: 100px;
+    background-color: rgb(207,210 ,213) ;
+    border: none;
+    width: 50px;
     height: 30px;
+    margin: 5px;
     font-size: 14px; 
     border-radius: 5px;
     font-weight: bold;
     font-family: monospace;
-    display: inline;
+    float: right;
 }

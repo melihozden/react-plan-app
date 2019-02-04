@@ -11,7 +11,9 @@
     margin : 3px;
     padding : 10px;    
     font-size: 16px;
-    font-family: 'Courier New', Courier, monospace ;
+    /* font-family: 'Courier New', Courier, monospace ; */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Raleway', sans-serif;
     background-color: black ;
     border: 1px solid #000;
     border-radius: 5px;
@@ -23,7 +25,9 @@
     margin : 3px;
     padding : 10px;    
     font-size: 16px;
-    font-family: 'Courier New', Courier, monospace ;
+    /* font-family: 'Courier New', Courier, monospace ; */
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Raleway', sans-serif;
     background-color: rgb(177, 38, 38) ;
     border: 1px solid rgb(177, 38, 38) ;
     border-radius: 5px;

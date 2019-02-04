@@ -84,15 +84,15 @@ class Register extends Component {
        </div>
 
        <div className="u-form-group">
-         <input className="email" value={email} type="email" name="email" placeholder="Email" onChange={this.handleChange} autoComplete="true"/>
+         <input className="email" value={email} type="email" name="email" placeholder="abc@example.com" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input className="password" value={password} type="password" name="password" placeholder="Password" onChange={this.handleChange} autoComplete="true"/>
+         <input className="password" value={password} type="password" name="password" placeholder="Create a password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">
-         <input className="confirm" value={confirm} type="password" name="confirm" placeholder="Confirm Password" onChange={this.handleChange} autoComplete="true"/>
+         <input className="confirm" value={confirm} type="password" name="confirm" placeholder="Confirm password" onChange={this.handleChange} autoComplete="true"/>
        </div>
  
        <div className="u-form-group">

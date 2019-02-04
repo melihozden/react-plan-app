@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
-
-import "../css/settings.css"
-
-class Settings extends Component {
-    render() {
-        return (
-            <div>
-                <button className="settings-button">Selam</button>
-            </div>
-        );
+import React from 'react';
+import '../css/settings.css';
+const Settings = () => {
+    const style= {
+        
     }
-}
+    return (
+        <button className="settings-button"><i class="fas fa-sliders-h fa-2x"></i></button>
+    );
+};
 
 export default Settings;

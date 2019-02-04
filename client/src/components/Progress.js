@@ -10,7 +10,7 @@ class Todo extends Component {
         return (
             <div className="outdiv">
               <div className="div-header">
-               <span className="quantity">{this.props.quantity}</span> Progress Section
+               <span className="quantity">{this.props.quantity}</span> In Progress
                     <button className="form-button"><i className="fas fa-plus fa-2x"></i></button>
             </div>
                <Query query={GET_ACTIVE_USER}>
