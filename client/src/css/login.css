@@ -50,8 +50,7 @@
   .u-form-group label{
       font-size: 12px; 
   }
-  .u-form-group input[type="email"],
-  .u-form-group input[type="password"]{
+  .u-form-group .login-email-text, .login-password-text{
     width: 75%;
     height:35px;
     outline: none;

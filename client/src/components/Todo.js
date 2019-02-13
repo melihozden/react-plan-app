@@ -16,6 +16,15 @@ class Todo extends Component {
             <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
+
+                       if (data.activeUser.todos.length === 0 )        
+                        {
+                            return(
+                                <div className="no-content">
+                                    You have no plan <i class="far fa-frown fa-2x"></i>
+                                </div>
+                            )
+                        }
                         if(loading) return <div>Loading Todos</div>
                         if(error) return <div>Todo Error</div>
                         console.log(data)
@@ -25,11 +34,10 @@ class Todo extends Component {
                                // https://yuilibrary.com/yui/docs/dd/scroll-list.html
                                 data.activeUser.todos.map(todos =>(
                                     <li key={todos.id} className="li-field">
-                                        <div className="text">{todos.todoPlan}
+                                        {todos.todoPlan}
                                             <div className="date">
                                                 <Moment fromNow>{todos.createdAt}</Moment>
-                                            </div>
-                                        </div>
+                                             </div>
                                     </li>
                                 )
                                 )

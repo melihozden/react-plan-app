@@ -1,0 +1,8 @@
+.all-div{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 50%;
+    background: url('../images/hotballoon.jpg') #2b3137 no-repeat contain;
+    position: fixed;
+}

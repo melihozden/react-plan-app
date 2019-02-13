@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../css/profile.css';
-import ProfileForm from '../components/ProfileForm' ;
+// import ProfileForm from '../components/ProfileForm' ;
 import Moment from 'react-moment';
 import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index';
@@ -17,6 +17,14 @@ class Todo extends Component {
                <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
+                        if (data.activeUser.dones.length === 0 )        
+                        {
+                            return(
+                                <div className="no-content">
+                                    You have no done plan <i class="far fa-frown fa-2x"></i>
+                                </div>
+                            )
+                        }
                         if(loading) return <div>Loading Dones</div>
                         if(error) return <div>Done Error</div>
                         console.log(data)

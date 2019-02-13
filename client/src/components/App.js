@@ -13,8 +13,9 @@ import {
   import Login from './pages/Login';
   import Register from './pages/Register';
   import Profile from './pages/Profile';
+  import HomeScreen from './pages/HomeScreen';
   import Header from './Header';
-  import Footer from './Footer';
+  // import Footer from './Footer';
   
 const Root = ({refetch,session}) =>(
 <Router>
@@ -26,6 +27,7 @@ const Root = ({refetch,session}) =>(
       <Route path="/login" render = { () => <Login refetch={refetch}/>}/>
       <Route path="/register" render={ () => <Register refetch={refetch}/>}/>
       <Route path="/profile" render={ () => <Profile session={session} />}/>
+      <Route path="/" render = { () => <HomeScreen refetch={refetch}/>}/>
       <Redirect to="/login"/>
       {/*<Home/>   if everything goes correct (user logged in completely) */}   
     </Switch>

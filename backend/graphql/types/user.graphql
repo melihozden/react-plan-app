@@ -11,6 +11,7 @@ type User{
     id: ID!
     fullname: String!
     email: String!
+    isValid: Boolean!
     createdAt: Date
     todos: [Todo!]!
     progresses: [Progress!]!
