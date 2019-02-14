@@ -17,7 +17,7 @@ class Todo extends Component {
                <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
-                        if (data.activeUser.dones.length === 0 )        
+                        if (this.props.quantity === 0 )        
                         {
                             return(
                                 <div className="no-content">

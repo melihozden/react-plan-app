@@ -22,12 +22,13 @@
     width: 90%;
     padding : 15px;
     margin: 10px;
+    font-family: 'Sarabun', sans-serif;
     background-color: rgba(57, 159, 255, 0.486);
     box-shadow: 2px 2px rgb(223,225,227);
     border: none;
     border-radius: 5px;
 }
-.text:hover{
+.li-field:hover{
     cursor: all-scroll;
 }
 .date{

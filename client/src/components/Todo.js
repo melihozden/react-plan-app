@@ -6,6 +6,9 @@ import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index'
 
 class Todo extends Component {
+    state = {
+        isOpen: false            
+    }
     render() {
         return (
             <div className="outdiv">
@@ -17,7 +20,7 @@ class Todo extends Component {
                 {
                     ({data,loading,error}) =>{
 
-                       if (data.activeUser.todos.length === 0 )        
+                       if (this.props.quantity === 0 )        
                         {
                             return(
                                 <div className="no-content">

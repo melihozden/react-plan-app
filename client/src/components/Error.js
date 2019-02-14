@@ -1,11 +1,12 @@
 import React from 'react';
+import '../css/error.css'
 
 const Error = props => {
     const {message} = props.error
     // console.log(props)
     return (
-        <div>
-            {message}
+        <div className="error-design">
+            Please check your email/password again
         </div>
     );
 };
