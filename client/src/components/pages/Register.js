@@ -96,7 +96,7 @@ class Register extends Component {
        </div>
  
        <div className="u-form-group">
-         <button disabled={loading || this.formValidate()}>Register</button>
+         <button  disabled={loading || this.formValidate()}>Register</button>
          <p>Already have an account? <a href="/login" className="forgot-tag">Login</a></p>          
        </div>
       

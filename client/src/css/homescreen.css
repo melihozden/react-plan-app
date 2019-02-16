@@ -1,8 +1,13 @@
-.all-div{
-    padding:0;
-    margin:0;
-    width: 100%;
-    height: 50%;
-    background: url('../images/hotballoon.jpg') #2b3137 no-repeat contain;
-    position: fixed;
+.jumbotron-out-div{
+    width: 500px; 
+    height:250px;
+    margin: 50px;
+}
+.jumbotron-in-div{
+    float:left;
+    width:150px;
+    height:150px;
+    border:#CCC solid 1px;
+    margin-right: 10px;
+    margin-left: 4px;
 }

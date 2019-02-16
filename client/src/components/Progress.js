@@ -11,6 +11,7 @@ class Todo extends Component {
             <div className="outdiv">
               <div className="div-header">
                <span className="quantity">{this.props.quantity}</span> In Progress
+                    <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button>
                     <button className="form-button"><i className="fas fa-plus fa-2x"></i></button>
             </div>
                <Query query={GET_ACTIVE_USER}>
@@ -28,20 +29,25 @@ class Todo extends Component {
                         if(error) return <div>Progresses Error</div>
                         console.log(data)
                        return (
-                        <ul className="ul-field">
-                            {
-                                data.activeUser.progresses.map(progress =>(
-                                    <li key={progress.id} className="li-field">
-                                        <div className="text">{progress.progressPlan}
-                                            <div className="date">
-                                                <Moment fromNow>{progress.createdAt}</Moment>
-                                            </div>
-                                        </div>
-                                    </li>
-                                )
-                                )
-                            }
-                        </ul>
+                        <ul className="ul-field" id="ul-deger">
+                        {
+                           // https://yuilibrary.com/yui/docs/dd/scroll-list.html
+                            data.activeUser.progresses.map(progresses =>(
+                                <div className="out-div-li">
+                                <span className="li-menu">
+                                    <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
+                                </span>
+                                <li key={progresses.id} className="li-field">
+                                    {progresses.progressPlan}
+                                </li>
+                                    <span className="date">
+                                            <Moment fromNow>{progresses.createdAt}</Moment>
+                                     </span>
+                                </div>
+                            )
+                            )
+                        }
+                    </ul>
                        )
                     }
                 }

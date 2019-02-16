@@ -1,38 +1,65 @@
 .outdiv{
-    width: 30.5% ;
-    height: 650px;
+    width: 490px ;
+    height: 675px;
     background-color: rgb(231,233,235);
     margin: 30px 10px ;
     border-radius: 5px;
-    display: inline-table;
+    display: inline-block;
     /* margin-left: 75% ; */
     padding: 10px;
     font-size: 15px;
-    font-weight:bold; 
+    font-weight:bold;
     color: gray;
-    overflow: scroll;
+    overflow: auto;
+
 }
 .ul-field{
     list-style: none;
-    margin : 0px; 
+    margin : 0px;
     padding: 0px;
+    overflow: auto;
 }
 .li-field{
+    color : black;
+    width: 90%;
+    padding : 10px 0px 15px 5px !important;
+    margin-right: 32px!important;
+    font-family: 'Sarabun', sans-serif;
+    background-color: rgb(220, 221, 221);
+    border: none;
+    border-radius: 5px;
+
+}
+.out-div-li{
     color : black;
     width: 90%;
     padding : 15px;
     margin: 10px;
     font-family: 'Sarabun', sans-serif;
-    background-color: rgba(57, 159, 255, 0.486);
+    background-color: rgb(220, 221, 221);
     box-shadow: 2px 2px rgb(223,225,227);
     border: none;
     border-radius: 5px;
+
 }
 .li-field:hover{
     cursor: all-scroll;
 }
+.li-menu{
+    float: right;
+    position: relative;
+    top: -10px;
+}
+.li-menu-top-right-button{
+    background-color: transparent ;
+    border: none;
+}
 .date{
     float: right;
+    position: relative;
+    bottom: 10px;
+    margin-left : 10px ;
+    font-weight: bold;
     font-size: 13px;
     color: #0D0D4B;
 }
@@ -40,15 +67,16 @@
     text-align: left
 }
 .div-header{
-margin-bottom: 20px;
+    position: initial;
+    margin-bottom: 20px;
 }
 .form-button{
-    border: none; 
+    border: none;
     float: right;
     background-color: transparent;
 }
 .quantity{
-    background: rgb(207, 210,212); 
+    background: rgb(207, 210,212);
     border-radius: 50%;
     color: rgb(64, 70, 74);
     margin-right: 5px;
@@ -56,11 +84,10 @@ margin-bottom: 20px;
     font-size: 14px;
 }
 .no-content{
-    text-align: center; 
+    text-align: center;
     margin-top: 50%;
     font-size: 24px;
     font-family: 'Varela Round', sans-serif;
     background-color: transparent;
 }
-
 
