@@ -30,25 +30,27 @@ class Todo extends Component {
                         if(error) return <div>Done Error</div>
                         console.log(data)
                        return (
-                        <ul className="ul-field" id="ul-deger">
-                        {
-                           // https://yuilibrary.com/yui/docs/dd/scroll-list.html
-                            data.activeUser.dones.map(dones =>(
-                                <div className="out-div-li">
-                                <span className="li-menu">
-                                    <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
-                                </span>
-                                <li key={dones.id} className="li-field">
-                                    {dones.donePlan}
-                                </li>
-                                    <span className="date">
-                                            <Moment fromNow>{dones.createdAt}</Moment>
-                                     </span>
-                                </div>
-                            )
-                            )
-                        }
-                    </ul>
+                        <div className="new-div">
+                        <div className="ul-field" id="ul-deger">
+                            {
+                                // https://yuilibrary.com/yui/docs/dd/scroll-list.html
+                                data.activeUser.dones.map(dones =>(
+                                    <div className="out-div-li">
+                                    <span className="li-menu">
+                                        <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
+                                    </span>
+                                    <div key={dones.id} className="li-field">
+                                        {dones.donePlan}
+                                    </div>
+                                        <span className="date">
+                                                <Moment fromNow>{dones.createdAt}</Moment>
+                                        </span>
+                                    </div>
+                                )
+                                )
+                            }
+                        </div>
+                    </div>
                        )
                     }
                 }

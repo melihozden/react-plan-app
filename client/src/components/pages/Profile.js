@@ -9,15 +9,13 @@ import '../../css/profile.css'
 // import {GET_TODOS, GET_INPROGRESS, GET_DONE} from '../../queries/index'
 
 import auth from '../auth';
-const style = {
-    color: "white",
-    marginTop: "10px",
-    marginLeft: "20px"
-}
+
 const Profile = ({session}) => (
             <div>
-                <div style={style}>
-                    "Welcome {session.activeUser.fullname}" <br/>
+                <div className="welcome-div">
+                    Welcome back {session.activeUser.fullname}
+                </div>
+                <div className="createdat-div">
                     Created At : <Moment date={session.activeUser.createdAt} format="DD/MM/YYYY"/>
                 </div>
 

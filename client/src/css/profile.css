@@ -1,11 +1,12 @@
 .outdiv{
     width: 100% ;
-    height: 670px;
-    background-color: rgb(231,233,235);
+    height: 655px;
+    background-color: rgb(239,241,243);
     margin: 30px 10px ;
     border-radius: 5px;
     float: left;
     padding: 10px;
+    padding-right:5px;
     font-size: 14px;
     font-weight:bold;
     color: gray;
@@ -26,7 +27,7 @@
     padding : 10px 0px 15px 5px !important;
     margin-right: 32px!important;
     font-family: 'Sarabun', sans-serif;
-    background-color: rgb(220, 221, 221);
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     position: relative !important;
@@ -37,7 +38,7 @@
     padding : 15px;
     margin: 10px;
     font-family: 'Sarabun', sans-serif;
-    background-color: rgb(220, 221, 221);
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px rgb(223,225,227);
     border: none;
     border-radius: 5px;
@@ -93,6 +94,53 @@
 }
 .all-div{
     display: flex;
+    position: absolute;
     padding: 0px;
     margin: 0px;
+}
+.welcome-div {
+    text-align: center;
+    font-size: 24px;
+    color : white;
+    margin-top: 10px;
+    font-family: 'Varela Round', sans-serif;
+    animation-name: fadein;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0% { opacity: 0;  }
+    50%   { opacity: 1; }
+    100% {display: none; opacity: 0; }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    0% { opacity: 0;  }
+    50%   { opacity: 1; }
+    100% { display:none;opacity: 0; }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0;  }
+    50%   { opacity: 1; }
+    100% { display:none;opacity: 0;  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    0% { opacity: 0;  }
+    50%   { opacity: 1; }
+    100% {display: one; opacity: 0;  }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    0% { opacity: 0;  }
+    50%   { opacity: 1; }
+    100% { display:none;opacity: 0;  }
+
+}
+.createdat-div{
+    color : white ;
+    margin-top: 10px;
+    margin-left: 20px;
 }

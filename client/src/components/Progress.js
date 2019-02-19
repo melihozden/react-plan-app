@@ -29,25 +29,27 @@ class Todo extends Component {
                         if(error) return <div>Progresses Error</div>
                         console.log(data)
                        return (
-                        <ul className="ul-field" id="ul-deger">
-                        {
-                           // https://yuilibrary.com/yui/docs/dd/scroll-list.html
-                            data.activeUser.progresses.map(progresses =>(
-                                <div className="out-div-li">
-                                <span className="li-menu">
-                                    <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
-                                </span>
-                                <li key={progresses.id} className="li-field">
-                                    {progresses.progressPlan}
-                                </li>
-                                    <span className="date">
-                                            <Moment fromNow>{progresses.createdAt}</Moment>
-                                     </span>
-                                </div>
-                            )
-                            )
-                        }
-                    </ul>
+                        <div className="new-div">
+                        <div className="ul-field" id="ul-deger">
+                            {
+                                // https://yuilibrary.com/yui/docs/dd/scroll-list.html
+                                data.activeUser.progresses.map(progress =>(
+                                    <div className="out-div-li">
+                                    <span className="li-menu">
+                                        <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
+                                    </span>
+                                    <div key={progress.id} className="li-field">
+                                        {progress.progressPlan}
+                                    </div>
+                                        <span className="date">
+                                                <Moment fromNow>{progress.createdAt}</Moment>
+                                        </span>
+                                    </div>
+                                )
+                                )
+                            }
+                        </div>
+                    </div>
                        )
                     }
                 }
