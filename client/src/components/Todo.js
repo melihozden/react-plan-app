@@ -35,25 +35,27 @@ class Todo extends Component {
                         if(error) return <div>Todo Error</div>
                         console.log(data)
                         return (
-                        <ul className="ul-field" id="ul-deger">
-                            {
-                               // https://yuilibrary.com/yui/docs/dd/scroll-list.html
-                               data.activeUser.todos.map(todos =>(
-                                   <div className="out-div-li">
-                                    <span className="li-menu">
-                                        <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
-                                    </span>
-                                    <li key={todos.id} className="li-field">
-                                        {todos.todoPlan}
-                                    </li>
-                                        <span className="date">
-                                                <Moment fromNow>{todos.createdAt}</Moment>
-                                         </span>
-                                    </div>
-                                )
-                                )
-                            }
-                        </ul>
+                            <div className="new-div">
+                                <div className="ul-field" id="ul-deger">
+                                    {
+                                        // https://yuilibrary.com/yui/docs/dd/scroll-list.html
+                                        data.activeUser.todos.map(todos =>(
+                                            <div className="out-div-li">
+                                            <span className="li-menu">
+                                                <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>
+                                            </span>
+                                            <div key={todos.id} className="li-field">
+                                                {todos.todoPlan}
+                                            </div>
+                                                <span className="date">
+                                                        <Moment fromNow>{todos.createdAt}</Moment>
+                                                </span>
+                                            </div>
+                                        )
+                                        )
+                                    }
+                                </div>
+                            </div>
                        )
                     }
                 }
