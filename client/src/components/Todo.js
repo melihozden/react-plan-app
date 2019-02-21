@@ -5,19 +5,40 @@ import Moment from 'react-moment';
 import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index'
 
+const Child = () => (
+    <div className='toggleForm-div'>
+       <textarea className="textarea" />
+       <div className="button-group">
+            <button className="add-button">Add</button>
+            <button className="cancel-button">Cancel</button>
+       </div>
+      </div>
+    )
 class Todo extends Component {
-    state = {
-        isOpen: false            
-    }
+    constructor () {
+        super()
+        this.state = {
+          isHidden: false
+          
+        }
+      }
+      toggleHidden = () => {
+        this.setState({
+          isHidden: !this.state.isHidden
+        })
+      }
+      
     render() {
         return (
+            
             
             <div className="outdiv">
             <div className="div-header">
                <span className="quantity">{this.props.quantity}</span> Todo
                     <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button>
-                    <button className="form-button"><i className="fas fa-plus fa-2x"></i></button>
+                    <button className="form-button" onClick={this.toggleHidden}><i className="fas fa-plus fa-2x"></i></button>
             </div>
+
             <Query query={GET_ACTIVE_USER}>
                 {
                     ({data,loading,error}) =>{
@@ -27,7 +48,6 @@ class Todo extends Component {
                             return(
                                 <div className="no-content">
                                     You have no plan <i class="far fa-frown fa-2x"></i>
-                                    
                                 </div>
                             )
                         }
@@ -36,6 +56,7 @@ class Todo extends Component {
                         console.log(data)
                         return (
                             <div className="new-div">
+                            {this.state.isHidden && <Child />}
                                 <div className="ul-field" id="ul-deger">
                                     {
                                         // https://yuilibrary.com/yui/docs/dd/scroll-list.html

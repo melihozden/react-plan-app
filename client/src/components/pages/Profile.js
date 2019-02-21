@@ -5,6 +5,7 @@ import Done from '../Done';
 import Moment from 'react-moment';
 
 import '../../css/profile.css'
+
 // import { Query } from 'react-apollo';
 // import {GET_TODOS, GET_INPROGRESS, GET_DONE} from '../../queries/index'
 

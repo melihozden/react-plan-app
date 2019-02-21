@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(40, 79, 117) ;
+    background-color: rgb(40, 79, 117) !important ;
     width: 100% ;
     height: 100%;
     margin: 0;
