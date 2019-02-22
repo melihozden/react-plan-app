@@ -14,16 +14,16 @@ const initialState = {
   email: '',
   password: '',
 }
-const modalState = {
-  modalOpen: false
-}
+// const modalState = {
+//   modalOpen: false
+// }
 
 
 class Login extends Component {
 
   state = {
     ...initialState,
-    ...modalState
+    // ...modalState
   };
 
   handleOpen = () => this.setState({ modalOpen: true })

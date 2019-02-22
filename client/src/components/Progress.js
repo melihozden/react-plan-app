@@ -5,7 +5,7 @@ import Moment from 'react-moment';
 import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index';
 
-class Todo extends Component {
+class Progress extends Component {
     render() {
         return (
             <div className="outdiv">
@@ -59,4 +59,4 @@ class Todo extends Component {
     }
 }
 
-export default Todo;
+export default Progress;

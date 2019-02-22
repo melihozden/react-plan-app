@@ -2,30 +2,41 @@ import React, { Component } from 'react';
 import '../css/profile.css';
 // import ProfileForm from '../components/ProfileForm' ;
 import Moment from 'react-moment';
-import { Query } from 'react-apollo';
+import { Query,Mutation } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index'
+import { ADD_TODO  } from '../queries/index';
 
 const Child = () => (
     <div className='toggleForm-div'>
-       <textarea className="textarea" />
+       <textarea type="textarea" className="textarea" name="todoplan" />
        <div className="button-group">
             <button className="add-button">Add</button>
             <button className="cancel-button">Cancel</button>
        </div>
       </div>
     )
+
 class Todo extends Component {
-    constructor () {
-        super()
-        this.state = {
-          isHidden: false
-          
-        }
+        state = {
+          isHidden: false,
+          todoplan : '',
+          userId: ''
       }
       toggleHidden = () => {
         this.setState({
           isHidden: !this.state.isHidden
         })
+      }
+      onChange = e =>{
+          this.setState({
+              [e.target.name]: e.target.value
+          })
+      }
+      componentDidMount(){
+          console.log(this.props)
+          this.setState({
+              userId: this.props.id
+          })
       }
       
     render() {
@@ -56,7 +67,8 @@ class Todo extends Component {
                         console.log(data)
                         return (
                             <div className="new-div">
-                            {this.state.isHidden && <Child />}
+                            {this.state.isHidden && <Child/>}
+                            
                                 <div className="ul-field" id="ul-deger">
                                     {
                                         // https://yuilibrary.com/yui/docs/dd/scroll-list.html

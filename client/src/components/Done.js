@@ -6,7 +6,7 @@ import { Query } from 'react-apollo';
 import {GET_ACTIVE_USER} from '../queries/index';
 
 
-class Todo extends Component {
+class Done extends Component {
     render() {
         return (
             <div className="outdiv">
@@ -60,4 +60,4 @@ class Todo extends Component {
     }
 }
 
-export default Todo;
+export default Done;

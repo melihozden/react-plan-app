@@ -22,9 +22,9 @@ const Profile = ({session}) => (
 
                 {/* */}
                 <div className="all-div">
-                    <Todo quantity={session.activeUser.todos.length} />
-                    <Progress quantity={session.activeUser.progresses.length} />
-                    <Done quantity={session.activeUser.dones.length} />
+                    <Todo quantity={session.activeUser.todos.length} id={session.activeUser.id} />
+                    <Progress quantity={session.activeUser.progresses.length} id={session.activeUser.id}/>
+                    <Done quantity={session.activeUser.dones.length} id={session.activeUser.id}/>
                 </div>
             </div>
 );

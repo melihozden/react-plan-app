@@ -17,6 +17,7 @@ mutation($email:String! $password:String!) {
 export const GET_ACTIVE_USER = gql`
 query{
   activeUser{
+    id
     fullname
     email
     createdAt
@@ -75,6 +76,17 @@ query {
   }
 }
 `
-
+export const ADD_TODO = gql`
+mutation($todoPlan:String! $user_id:ID!) {
+  createTodo(
+    data: {
+      todoPlan: $todoPlan
+      userId: $user_id
+    }
+  ) {
+    id
+  }
+}
+`
 
 
