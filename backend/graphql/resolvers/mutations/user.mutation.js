@@ -14,7 +14,7 @@ module.exports = {
 			email,
 			password
 		}).save();
-		return {token: token.generate(newUser, '1h' )}
+		return {token: token.generate(newUser, '1h' )}  // one hour 
 
 	},
 	signIn: async (parent,{data: { email , password } },{ User })=>{
@@ -27,6 +27,6 @@ module.exports = {
 			throw new Error('Password is wrong!')
 		}
 
-		return {token: token.generate(user, '1h' )}
+		return {token: token.generate(user, '1h' )}	// one hour 
 	}
 };

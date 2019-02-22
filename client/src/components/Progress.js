@@ -21,7 +21,7 @@ class Progress extends Component {
                         {
                             return(
                                 <div className="no-content">
-                                    You have no in progress <i class="far fa-frown fa-2x"></i>
+                                    There is no in progress plan<i class="far fa-frown fa-2x"></i>
                                 </div>
                             )
                         }

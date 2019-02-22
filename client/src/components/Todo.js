@@ -3,22 +3,11 @@ import '../css/profile.css';
 // import ProfileForm from '../components/ProfileForm' ;
 import Moment from 'react-moment';
 import { Query,Mutation } from 'react-apollo';
-import {GET_ACTIVE_USER} from '../queries/index'
-import { ADD_TODO  } from '../queries/index';
-
-const Child = () => (
-    <div className='toggleForm-div'>
-       <textarea type="textarea" className="textarea" name="todoplan" />
-       <div className="button-group">
-            <button className="add-button">Add</button>
-            <button className="cancel-button">Cancel</button>
-       </div>
-      </div>
-    )
+import {GET_ACTIVE_USER, ADD_TODO} from '../queries'
 
 class Todo extends Component {
         state = {
-          isHidden: false,
+          isHidden: true,
           todoplan : '',
           userId: ''
       }
@@ -32,8 +21,22 @@ class Todo extends Component {
               [e.target.name]: e.target.value
           })
       }
+      formValidate = ()=>{
+          const {todoplan} = this.state
+          return !todoplan
+      }
+      onSubmit = (e,addTodo) =>{
+        e.preventDefault();
+        if(!this.formValidate()){
+            addTodo().then(({data}) =>{
+                this.setState({
+                    todoplan:''
+                })
+            })
+        }
+      }
       componentDidMount(){
-          console.log(this.props)
+        //   console.log(this.props)
           this.setState({
               userId: this.props.id
           })
@@ -58,16 +61,34 @@ class Todo extends Component {
                         {
                             return(
                                 <div className="no-content">
-                                    You have no plan <i class="far fa-frown fa-2x"></i>
+                                    There is no todo plan <i class="far fa-frown fa-2x"></i>
                                 </div>
                             )
                         }
                         if(loading) return <div>Loading Todos</div>
                         if(error) return <div>Todo Error</div>
-                        console.log(data)
+                        // console.log(data)
                         return (
                             <div className="new-div">
-                            {this.state.isHidden && <Child/>}
+                            {/* {this.state.isHidden && <Child/>} */}
+                            <Mutation mutation={ADD_TODO} variables= {{...this.state}} refetchQueries={[{query:GET_ACTIVE_USER}]}>
+                            {
+                                (addTodo, {loading,error}) =>(
+
+                                    <div className='toggleForm-div' hidden={this.state.isHidden}>
+                                    
+                                        <textarea value={this.state.todoplan} className="textarea" name="todoplan" onChange={this.onChange} />
+                                        <div className="button-group">
+                                                <input value="Add" type="submit" className="add-button" onClick={e => {
+                                        this.onSubmit(e,addTodo)
+                                    }}/>
+                                                <button className="cancel-button" onClick={this.toggleHidden}>Cancel</button>
+                                        </div>
+                                    
+                                </div>
+                                )
+                            }
+                            </Mutation>
                             
                                 <div className="ul-field" id="ul-deger">
                                     {

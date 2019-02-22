@@ -77,13 +77,10 @@ query {
 }
 `
 export const ADD_TODO = gql`
-mutation($todoPlan:String! $user_id:ID!) {
+mutation($todoplan:String!  $userId:ID!) {
   createTodo(
-    data: {
-      todoPlan: $todoPlan
-      userId: $user_id
-    }
-  ) {
+    data: {todoPlan:$todoplan, userId:$userId})
+     {
     id
   }
 }

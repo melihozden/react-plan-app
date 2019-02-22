@@ -22,7 +22,7 @@ class Done extends Component {
                         {
                             return(
                                 <div className="no-content">
-                                    You have no done plan <i class="far fa-frown fa-2x"></i>
+                                    There is no done plan <i class="far fa-frown fa-2x"></i>
                                 </div>
                             )
                         }
