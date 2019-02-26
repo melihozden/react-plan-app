@@ -1,8 +1,7 @@
 .horizontal_menu{
-    width: 98.75% ;
     padding: 10px;
     height: 50px ;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgb(25, 90, 110);
 }
 .navlink-login{
     color: white;
@@ -13,8 +12,8 @@
     /* font-family: 'Courier New', Courier, monospace ; */
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Raleway', sans-serif;
-    background-color: black ;
-    border: 1px solid #000;
+    background-color: rgb(40, 79, 117) ;
+    border: 1px solid rgb(40, 79, 117);
     border-radius: 5px;
 }
 .navlink-register{

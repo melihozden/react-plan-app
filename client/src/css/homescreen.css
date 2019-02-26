@@ -1,15 +1,27 @@
 
-
+.all-div{
+    width: 100%;
+    height: 60%;
+    background: #2b3137e5;
+}
 .jumbotron-out-div{
-    width: 500px; 
+    position: relative;
+    margin: auto;
+    width: 75%; 
     height:250px;
-    margin-top: 50px;
+    margin-top: 22.5%;
+    text-align: center;
 }
 .jumbotron-in-div{
-    float:left;
-    width:150px;
-    height:150px;
+    display: inline-block;
+    position: relative;
+    background: rgba(255, 255, 255, 1);
+    width:250px;
+    height:300px;
     border:#CCC solid 1px;
-    margin-right: 10px;
-    margin-left: 4px;
+    border-radius: 10px;
+    margin:50px;
+    font-family: 'Sarabun', sans-serif;
+    border: none ;
+
 }

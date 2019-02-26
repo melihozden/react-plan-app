@@ -85,7 +85,7 @@ class Login extends Component {
               </div>
 
               <div className="u-form-group">
-                <button disabled={loading || this.formValidate()}>Register</button>
+                <button disabled={loading || this.formValidate()}>Login</button>
                 <p>Don't have an account? <a href="/register" className="forgot-tag">Sign Up</a></p>
               </div>
 
