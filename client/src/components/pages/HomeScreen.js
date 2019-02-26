@@ -4,7 +4,7 @@ import '../../css/homescreen.css'
 class HomeScreen extends Component {
     render() {
         return (
-            <div className="all-div">
+            <div className="all-jumbotron">
                 <div className="jumbotron-out-div">
                     <div className="jumbotron-in-div">
                         <h1>Todo</h1>
