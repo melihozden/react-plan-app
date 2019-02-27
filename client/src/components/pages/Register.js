@@ -8,7 +8,7 @@ import "../../css/register.css";
 
 //images and logos
 import logo2 from "../../images/blacktransx.png"
-import registerwall from '../../images/building.png'
+import registerwall from '../../images/mountain.jpg'
 // import logo from "../../images/whitetrans2x.png"
 
 

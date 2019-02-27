@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 import { Query,Mutation } from 'react-apollo';
 import {GET_ACTIVE_USER, ADD_TODO} from '../queries'
 
+
 class Todo extends Component {
         state = {
           isHidden: true,
@@ -48,7 +49,7 @@ class Todo extends Component {
             
             <div className="outdiv">
             <div className="div-header">
-               <span className="quantity">{this.props.quantity}</span> Todo
+               <span className="quantity">{this.props.quantity}</span> To do
                     <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button>
                     <button className="form-button" onClick={this.toggleHidden}><i className="fas fa-plus fa-2x"></i></button>
             </div>

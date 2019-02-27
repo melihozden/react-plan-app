@@ -70,7 +70,10 @@
 }
 .div-header{
     position: initial;
+    color:#262526;
     margin-bottom: 20px;
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
 }
 .form-button{
     border: none;
@@ -80,7 +83,7 @@
 .quantity{
     background: rgb(207, 210,212);
     border-radius: 50%;
-    color: rgb(64, 70, 74);
+    color: rgb(53, 58, 61);
     margin-right: 5px;
     padding : 5px;
     font-size: 14px;
