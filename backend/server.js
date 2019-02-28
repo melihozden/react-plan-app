@@ -9,12 +9,16 @@
  
  const resolvers = require('./graphql/resolvers/index');
  // models
-const User = require('./models/User');
-const Todo = require('./models/Todo');
+ const User = require('./models/User');
+ const Todo = require('./models/Todo');
 const Progress = require('./models/Progress');
 const Done = require('./models/Done');
 
- const server = new ApolloServer({
+const Mail = require('./mail')
+
+console.log(Mail)
+
+const server = new ApolloServer({
 	typeDefs: importSchema('./graphql/schema.graphql'),
 	resolvers,
 	context:({ req })=> ({
@@ -24,9 +28,6 @@ const Done = require('./models/Done');
 		Done,
 		activeUser : req.activeUser
 	})
-		
-
-	
 });
   mongoose
  	.connect(process.env.DB_URI, { useNewUrlParser: true,useCreateIndex:true })
@@ -34,6 +35,7 @@ const Done = require('./models/Done');
      .catch(e => console.log('MongoDB connection failure,more info: '+e))
  
  const app = express();
+ const app2 = express();
 
 app.use( async (req,res,next)=>{
 	const token = req.headers['authorization']
@@ -55,3 +57,9 @@ app.use( async (req,res,next)=>{
  app.listen({ port: 4001 }, () => {
  	console.log(`🚀 Backend server is ready at http://localhost:4001${server.graphqlPath}`);
  });
+//  app2.listen({ port: 4002 }, () => {
+// 	console.log(`✉️  Mail server is active at http://localhost:4002`);
+// });
+
+
+

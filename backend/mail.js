@@ -1,44 +1,27 @@
 
-// "use strict";
-const nodemailer = require("nodemailer");
+const express = require('express')
+const app = express();
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 
-// async..await is not allowed in global scope, must use a wrapper
-async function main(){
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  // Generate test SMTP service account from ethereal.email
-  // Only needed if you don't have a real mail account for testing
-  let account = await nodemailer.createTestAccount();
-
-  // create reusable transporter object using the default SMTP transport
-  let transporter = nodemailer.createTransport({
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: account.user, // generated ethereal user
-      pass: account.pass // generated ethereal password
-    }
-  });
-
-  // setup email data with unicode symbols
-  let mailOptions = {
-    from: 'divertech', // sender address
-    to: "bar@example.com, baz@example.com", // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Hello world?", // plain text body
-    html: "<b>Hello world?</b>" // html body
-  };
-
-  // send mail with defined transport object
-  let info = await transporter.sendMail(mailOptions)
-
-  console.log("Message sent: %s", info.messageId);
-  // Preview only available when sending through an Ethereal account
-  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-}
-
-main().catch(console.error);
+app.get('/sendmail',(req,res)=>{
+  // const {to,from,subject,text} = req.query ;
+const msg = {
+  to: 'melihozden403@gmail.com',
+  from: 'divertechnologyturkey@gmail.com',
+  subject: 'Sending with SendGrid is Fun',
+  text: 'and easy to do anywhere, even with Node.js',
+  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+};
+  sgMail.send(msg)
+  .then(()=>{
+      console.log("Mail has successfully sent")
+  })
+  .catch(error => {
+      console.log(error)
+  })
+})
+app.listen(4002 , ()=>{console.log("Send mail activate")})
 
