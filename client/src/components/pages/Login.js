@@ -17,8 +17,6 @@ const initialState = {
 // const modalState = {
 //   modalOpen: false
 // }
-
-
 class Login extends Component {
 
   state = {

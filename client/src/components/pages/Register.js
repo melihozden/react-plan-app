@@ -25,12 +25,31 @@ const initialState = {
     confirm: '',
     isConfirm : false
 }
+const mailState = {
+    sendEmail :{
+      to: '',
+      from: '',
+      subject : '',
+      text : ''
+    }
+}
 
 class Register extends Component {
     
-    state = {
-      ...initialState
-      };
+  state = {
+    ...initialState,
+    ...mailState
+    };
+
+  // sendEmail = () =>{
+
+  //   const {sendEmail} = this.state
+
+  //     fetch(`http://localhost:4002/send-email?to=${sendEmail.to}&from=${sendEmail.from}&subject=${sendEmail.subject}&text=${sendEmail.text}`)
+  //     .catch(err =>console.log(err))
+
+  // }
+
       handleChange = (event)=> {
         this.setState({
            [event.target.name] : event.target.value
@@ -39,12 +58,13 @@ class Register extends Component {
       handleSubmit = (e, createUser)=> {
         e.preventDefault();
         createUser().then(async({data})=>{
-          console.log(data)
+          console.log("handle Submitt "+data)
           localStorage.setItem('token',data.createUser.token)
            await this.props.refetch() ;
-          this.resetState()
-          this.props.history.push('/profile')
-        })
+           this.resetState()
+           this.props.history.push('/profile')
+          //  this.sendEmail()
+          })
       }
       formValidate = () =>{
       const {fullname,email,password,confirm} = this.state ;
