@@ -16,7 +16,7 @@ const Done = require('./models/Done');
 
 const Mail = require('./mail')
 
-console.log(Mail)
+// console.log(Mail)
 
 const server = new ApolloServer({
 	typeDefs: importSchema('./graphql/schema.graphql'),

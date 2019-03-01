@@ -17,6 +17,7 @@ import { CREATE_USER } from '../../queries/index';
 
 //error
 import Error from '../Error';
+import axios from 'axios';
 
 const initialState = {
     fullname: '',
@@ -25,20 +26,20 @@ const initialState = {
     confirm: '',
     isConfirm : false
 }
-const mailState = {
-    sendEmail :{
-      to: '',
-      from: '',
-      subject : '',
-      text : ''
-    }
-}
+// const mailState = {
+//     sendEmail :{
+//       to: '',
+//       from: '',
+//       subject : '',
+//       text : ''
+//     }
+// }
 
 class Register extends Component {
     
   state = {
     ...initialState,
-    ...mailState
+    // ...mailState
     };
 
   // sendEmail = () =>{
@@ -58,12 +59,12 @@ class Register extends Component {
       handleSubmit = (e, createUser)=> {
         e.preventDefault();
         createUser().then(async({data})=>{
-          console.log("handle Submitt "+data)
+          // console.log("handle Submitt "+data)
           localStorage.setItem('token',data.createUser.token)
            await this.props.refetch() ;
+           this.sendMail()
            this.resetState()
            this.props.history.push('/profile')
-          //  this.sendEmail()
           })
       }
       formValidate = () =>{
@@ -77,6 +78,15 @@ class Register extends Component {
           ...initialState
         })
       } 
+       sendMail = () =>{
+        const { fullname, email} = this.state
+        // console.log("FULLNAME : "+fullname)
+        // console.log("EMAIL : "+email)
+        axios.post('/registerauth',{
+          fullname,
+          email
+        })
+      }
 
     render() {
       const {fullname,email,password,confirm} = this.state ;

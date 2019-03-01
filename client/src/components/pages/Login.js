@@ -10,6 +10,7 @@ import { SIGNIN_USER } from '../../queries/index';
 // error component
 import Error  from '../Error';
 
+
 const initialState = {
   email: '',
   password: '',
@@ -24,9 +25,9 @@ class Login extends Component {
     // ...modalState
   };
 
-  handleOpen = () => this.setState({ modalOpen: true })
+  // handleOpen = () => this.setState({ modalOpen: true })
 
-  handleClose = () => this.setState({ modalOpen: false })
+  // handleClose = () => this.setState({ modalOpen: false })
   
   handleChange = (e)=>{
     this.setState({
