@@ -60,13 +60,14 @@ class Register extends Component {
         e.preventDefault();
         createUser().then(async({data})=>{
           // console.log("handle Submitt "+data)
+          this.sendMail()
           localStorage.setItem('token',data.createUser.token)
-           await this.props.refetch() ;
-           this.sendMail()
+          await this.props.refetch() ;
            this.resetState()
            this.props.history.push('/profile')
           })
       }
+
       formValidate = () =>{
       const {fullname,email,password,confirm} = this.state ;
       // null email,password,confirm also password must equals to confirm
@@ -82,7 +83,7 @@ class Register extends Component {
         const { fullname, email} = this.state
         // console.log("FULLNAME : "+fullname)
         // console.log("EMAIL : "+email)
-        axios.post('/registerauth',{
+        axios.post('http://localhost:4002/registerauth',{
           fullname,
           email
         })
@@ -93,9 +94,9 @@ class Register extends Component {
         return (
             <div className="login-box">
             
-    <div className="left-div">
+    {/* <div className="left-div">
     <img className="" src={registerwall} alt="register" height="520" width="350" />    
-    </div>
+    </div> */}
    
     <div className="right-div">
       <img className="logo-des-2" src={logo2} alt="logo" height="50" width="75" />    
