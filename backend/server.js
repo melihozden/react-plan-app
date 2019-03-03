@@ -14,7 +14,7 @@
 const Progress = require('./models/Progress');
 const Done = require('./models/Done');
 
-const Mail = require('./mail')
+require('./mail')
 
 // console.log(Mail)
 
@@ -40,11 +40,11 @@ const server = new ApolloServer({
 app.use( async (req,res,next)=>{
 	const token = req.headers['authorization']
 	if(token && token !== 'null'){
-		console.log(token)
+		// console.log(token)
 		try{
 			const activeUser = await jwt.verify(token,process.env.SECRET_KEY)
 			req.activeUser = activeUser
-			console.log(activeUser)
+			// console.log(activeUser)
 		}catch(e){
 			console.log(e)
 		}
