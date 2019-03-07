@@ -30,6 +30,7 @@ const  Header = ({session})=> {
                 {/* <NavLink className="navlink" to="/">Home</NavLink> */}
                 <NavLink className="navlink-login" to="/login">Login</NavLink>
                 <NavLink className="navlink-register" to="/register">Register</NavLink>
+                {/* <i class="fab fa-github fa-lg"></i> */}
              </div>
         </Fragment>
 

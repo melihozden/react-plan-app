@@ -18,6 +18,12 @@ console.log(req.body);
 
   // const {to,from,subject,text} = req.query ;
 //   console.log()
+
+{/* <a href="" 
+style="background-color:#333333;border:1px solid #333333;border-color:#333333;border-radius:6px;border-width:1px;color:#ffffff;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 18px 12px 18px;text-align:center;text-decoration:none" 
+target="_blank">Activate Your Account</a> */}
+
+
 const msg = {
   to: `${req.body.email}`,
   from: 'divertechnologyturkey@gmail.com',
@@ -26,7 +32,9 @@ const msg = {
   html: `
   <h3>Welcome to PlanApp ${req.body.fullname}</h3>
     <p>Activate your account down below</p>
-    <a href="http://localhost:3000/activate"><button>Activate</button></a>
+    <a href="http://localhost:3000/activate" 
+style="background-color:#25A3E9;border:1px solid #25A3E9;border-color:#25A3E9;border-radius:6px;border-width:1px;color:#ffffff;display:inline-block;font-family:arial,helvetica,sans-serif;font-size:16px;font-weight:normal;letter-spacing:0px;line-height:16px;padding:12px 18px 12px 18px;text-align:center;text-decoration:none" 
+target="_blank">Activate Your Account</a>
   `,
 };
   sgMail.send(msg)

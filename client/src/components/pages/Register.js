@@ -8,7 +8,7 @@ import "../../css/register.css";
 
 //images and logos
 import logo2 from "../../images/blacktransx.png"
-import registerwall from '../../images/mountain.jpg'
+// import registerwall from '../../images/mountain.jpg'
 // import logo from "../../images/whitetrans2x.png"
 
 
@@ -60,12 +60,12 @@ class Register extends Component {
         e.preventDefault();
         createUser().then(async({data})=>{
           // console.log("handle Submitt "+data)
-          this.sendMail()
           localStorage.setItem('token',data.createUser.token)
           await this.props.refetch() ;
-           this.resetState()
-           this.props.history.push('/profile')
-          })
+          this.sendMail()
+          this.resetState()
+          this.props.history.push('/profile')
+        })
       }
 
       formValidate = () =>{
