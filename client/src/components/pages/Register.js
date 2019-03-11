@@ -60,9 +60,9 @@ class Register extends Component {
         e.preventDefault();
         createUser().then(async({data})=>{
           // console.log("handle Submitt "+data)
+          this.sendMail()
           localStorage.setItem('token',data.createUser.token)
           await this.props.refetch() ;
-          this.sendMail()
           this.resetState()
           this.props.history.push('/profile')
         })
@@ -128,13 +128,10 @@ class Register extends Component {
  
        <div className="u-form-group">
          <button  disabled={loading || this.formValidate()}>Register</button>
-         <p>Already have an account? <a href="/login" className="forgot-tag">Login</a></p>          
+         <p className="login-with">Already have an account? <a href="/login" className="forgot-tag">Login</a></p>          
        </div>
       
- 
-       <hr className="seperator"/>
-      
-       <p className="login-with">-Or sign up with-</p>
+       <p className="login-with-2">-Or sign up with-</p>
       
        <div className="u-form-group">
          <button className="google-button"><i className="fab fa-google-plus-g fa-2x"></i></button>

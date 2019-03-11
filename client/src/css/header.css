@@ -5,7 +5,7 @@
 }
 .navlink-login{
     color: white;
-    text-decoration: none ;
+    text-decoration: none !important;
     margin : 3px;
     padding : 10px;    
     font-size: 16px;
@@ -16,9 +16,12 @@
     border: 1px solid rgb(40, 79, 117);
     border-radius: 5px;
 }
+.navlink-login:hover{
+    color : whitesmoke; 
+}
 .navlink-register{
     color: white;
-    text-decoration: none ;
+    text-decoration: none !important;
     margin : 3px;
     padding : 10px;    
     font-size: 16px;
@@ -28,6 +31,10 @@
     background-color: rgb(177, 38, 38) ;
     border: 1px solid rgb(177, 38, 38) ;
     border-radius: 5px;
+}
+.navlink-register:hover{
+    color : whitesmoke; 
+
 }
 .rightLoginRegister{
     margin: 15px 50px 0px 0px;
@@ -55,10 +62,13 @@
 
 .activeNavLink{
     color: white;
-    text-decoration: none ;
+    text-decoration: none !important;
     margin : 10px;
     margin-right: 30px;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace ;
     float: right;
+}
+.activeNavLink:hover{
+    color:whitesmoke;
 }

@@ -4,6 +4,7 @@ import '../css/profile.css';
 import Moment from 'react-moment';
 import { Query,Mutation } from 'react-apollo';
 import {GET_ACTIVE_USER, ADD_TODO} from '../queries'
+import { Spinner,Dropdown,DropdownToggle,DropdownMenu,DropdownItem } from 'reactstrap';
 
 
 class Todo extends Component {
@@ -50,29 +51,20 @@ class Todo extends Component {
             <div className="outdiv">
             <div className="div-header">
                <span className="quantity">{this.props.quantity}</span> To do
-                    <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button>
+               <Dropdown className="form-button" isOpen={false} toggle={this.toggle}>
+                    <DropdownToggle caret size="sm"><i class="fas fa-ellipsis-h fa-2x"></i></DropdownToggle>
+                    <DropdownMenu>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Another Action</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
+                    {/* <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button> */}
                     <button className="form-button" onClick={this.toggleHidden}><i className="fas fa-plus fa-2x"></i></button>
-            </div>
-
-            <Query query={GET_ACTIVE_USER}>
-                {
-                    ({data,loading,error}) =>{
-                        
-                        if (this.props.quantity === 0 )        
-                        {
-                            return(
-                                <div className="no-content">
-                                    There is no todo plan <i class="far fa-frown fa-2x"></i>
-                                </div>
-                            )
-                        }
-                        if(loading) return <div>Loading Todos</div>
-                        if(error) return <div>Todo Error</div>
-                        // console.log(data)
-                        return (
-                            <div className="new-div">
-                            {/* {this.state.isHidden && <Child/>} */}
-                            <Mutation mutation={ADD_TODO} variables= {{...this.state}} refetchQueries={[{query:GET_ACTIVE_USER}]}>
+            
+                    <Mutation mutation={ADD_TODO} variables= {{...this.state}} refetchQueries={[{query:GET_ACTIVE_USER}]}>
                             {
                                 (addTodo, {loading,error}) =>(
 
@@ -90,8 +82,30 @@ class Todo extends Component {
                                 )
                             }
                             </Mutation>
+            
+            
+            </div>
+
+            <Query query={GET_ACTIVE_USER}>
+                {
+                    ({data,loading,error}) =>{
+                        
+                        if (this.props.quantity === 0 )        
+                        {
+                            return(
+                                <div className="no-content">
+                                    There is no todo plan <i class="far fa-frown fa-2x"></i>
+                                </div>
+                            )
+                        }
+                        if(loading) return <Spinner color="secondary" />
+                        if(error) return <div>Todo Error</div>
+                        // console.log(data)
+                        return (
+                            <div className="new-div">
+                            {/* {this.state.isHidden && <Child/>} */}
                             
-                                <div className="ul-field" id="ul-deger">
+                            
                                     {
                                         // https://yuilibrary.com/yui/docs/dd/scroll-list.html
                                         data.activeUser.todos.map(todos =>(
@@ -110,7 +124,6 @@ class Todo extends Component {
                                         )
                                     }
                                 </div>
-                            </div>
                        )
                     }
                 }

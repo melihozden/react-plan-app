@@ -14,16 +14,14 @@
 }
 .new-div{
     overflow: auto !important;
-    height: 95%;
     width: 100% !important ;
+    height: 95% !important;
+    height: 92.5%;
 }
-.ul-field{
-    margin : 0px;
-    padding: 0px;
-}
+
 .li-field{
     color : black;
-    width: 90%;
+    width: 150;
     padding : 10px 0px 15px 5px !important;
     margin-right: 32px!important;
     font-family: 'Sarabun', sans-serif;
@@ -161,10 +159,14 @@
     margin: 10px;
     width: 92%;
     height: 50px;
+    max-height: 100px;
     border-radius: 5px;
     font-size: 14px;
     border: 1px solid gray;
 }
+/* .toggleForm-div{
+    display: inline;
+} */
 .add-button{
     background-color: rgb(50, 176, 79);
     color: white;

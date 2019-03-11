@@ -75,11 +75,16 @@
     font-size: 13px; 
     color: #073763;
   }
-  .seperator{
+  /* .seperator{
       width: 90%;
       border: 1px solid rgba(0, 0, 0, 0.637);
-  }
+  } */
   .login-with{
+      margin: 10px; 
+      font-size: 12px;
+  }
+  .login-with-2{
+       margin: 10px; 
       font-size: 12px;
   }
   .u-form-group .google-button{
