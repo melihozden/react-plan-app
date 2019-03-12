@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/activate.css';
-import { Button,Dropdown } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 class Activate extends Component {
 
     componentDidMount = () =>{

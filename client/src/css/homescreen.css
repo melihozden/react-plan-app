@@ -1,8 +1,8 @@
 .out{
     margin: 0px;
     padding: 0px;
-    display: flex;
-    flex-direction: column;
+    display: inline;
+    
 }
 .enter{
     margin : 0px; 
@@ -13,7 +13,7 @@
    background: #2b2e3b;
 }
 .top{
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .xxl-text{
     font-size: 72px
@@ -22,7 +22,7 @@
     font-size: 54px;
 }
 .margining{
-    margin-top: 275px;
+   bottom: 20px;
 }
 .w-color{
     color: #fff; 
@@ -41,9 +41,28 @@
     padding: 20px;
     left: 0;
     bottom: 0;
-    height: 40px;
+    height: 150px;
     width: 100%;
 }
 .icons-ul{
     list-style-type: none;
+}
+.card-deck{
+    width: 75%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+.card{
+    background-color: rgb(238, 241, 241) !important ;
+    border : none;
+    margin : 30px auto;
+    height: 200px;
+}
+.card-body{
+    padding : 0px;
+}
+.text-size{
+    font-size: 28px;
 }
