@@ -39,10 +39,12 @@ target="_blank">Activate Your Account</a>
 };
   sgMail.send(msg)
   .then(()=>{
-      console.log("Mail has successfully sent")
+    console.log("Mail has successfully sent")
+    res.status(200).send('Welcome').end();
   })
   .catch(error => {
       console.log(error)
+      res.status(500).end();
   })
 })
 

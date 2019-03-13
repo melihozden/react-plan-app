@@ -18,9 +18,11 @@ const  Header = ({session})=> {
     }
     const LinkWithLogin = ({session}) =>(
         <Fragment>
-            <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.fullname}</NavLink>
-            <Settings/>
-            <Logout/>
+            <div className="activeRightHeader">
+                <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.fullname}</NavLink>
+                <Settings/>
+                <Logout/>
+            </div>
         </Fragment>   
 )
 

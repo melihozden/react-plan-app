@@ -40,6 +40,10 @@
     margin: 15px 50px 0px 0px;
     float : right ;
 }
+.activeRightHeader{
+    margin: 10px 0px 0px 0px;
+    float : right ;
+}
 /* .navlink{
     color: white;
     text-decoration: none ;
