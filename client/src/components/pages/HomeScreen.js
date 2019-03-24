@@ -8,8 +8,8 @@ class HomeScreen extends Component {
         return (
             <div className="out">
                 <section className="enter">
-                    <div className="top xxl-text text-center">
-                        PlanApp
+                    <div className="top xxl-text white text-center">
+                        Planing for productivity
                         <p className="w-color margining s-text text-center">Plan your stuffs</p>
                     </div>
                 </section>

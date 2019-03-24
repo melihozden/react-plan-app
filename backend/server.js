@@ -35,7 +35,7 @@ const server = new ApolloServer({
      .catch(e => console.log('MongoDB connection failure,more info: '+e))
  
  const app = express();
- const app2 = express();
+//  const app2 = express();
 
 app.use( async (req,res,next)=>{
 	const token = req.headers['authorization']
