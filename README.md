@@ -3,7 +3,7 @@ Simple react planning todo/inprogress/done app for your plans
 
 # Starting backend server
 ```
-git clone <githubclone.git>
+git clone https://github.com/melihozden/react-plan-app.git
 cd react-plan-app/backend
 npm run start:dev
 ```
