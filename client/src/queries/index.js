@@ -86,4 +86,23 @@ mutation($todoplan:String!  $userId:ID!) {
 }
 `
 
+export const ADD_PROGRESS = gql`
+mutation($progressplan:String!  $userId:ID!) {
+  createProgress(
+    data: {progressPlan:$progressplan, userId:$userId})
+     {
+    id
+  }
+}
+`
+export const ADD_DONE = gql`
+mutation($doneplan:String!  $userId:ID!) {
+  createDone(
+    data: {donePlan:$doneoplan, userId:$userId})
+     {
+    id
+  }
+}
+`
+
 
