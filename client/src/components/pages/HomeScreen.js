@@ -96,10 +96,10 @@ class HomeScreen extends Component {
 
                 <div className="footer text-center">
                     <ul className="icons-ul">
-                        <li className="icons-li"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li className="icons-li">Hello</li>
+                        <li className="icons-li">Hello</li>
+                        <li className="icons-li">Hello</li>
+                        <li className="icons-li">Hello</li>
                     </ul>
                 </div>
 
