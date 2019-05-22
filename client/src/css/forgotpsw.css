@@ -1,0 +1,19 @@
+.center{
+    text-align: center;  
+}
+
+.forgot-group{
+   align-items: center;
+}
+
+.w{
+    width: 50%;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px rgb(110, 223, 129) solid ;
+    background: rgb(110, 223, 129);
+    font-size: 24px;
+    text-align: center;
+}
+
