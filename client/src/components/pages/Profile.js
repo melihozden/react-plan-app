@@ -14,13 +14,11 @@ import auth from '../auth';
 const Profile = ({ session }) => (
     <div>
         <Alert dismissible variant="danger">
-            <Alert.Heading>Oh snap! You didn't activate account yet!</Alert.Heading>
-            <p>
-                Change this and that and try again. Duis mollis, est non commodo luctus,
-                nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
-                consectetur purus sit amet fermentum.
+            <Alert.Heading className="center">Oh snap! You didn't activate account yet!</Alert.Heading>
+            <p className="center"> 
+                Please activate your account. We sent you a mail to activate your account.
             </p>
-        </Alert>;
+        </Alert>
         <div className="welcome-div">
             Welcome back {session.activeUser.fullname}
         </div>

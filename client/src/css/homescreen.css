@@ -50,6 +50,9 @@
 .icons-ul{
     list-style-type: none;
 }
+.icons-li{
+    display: inline-block;
+}
 .card-deck{
     width: 75%;
     margin: 20px auto;

@@ -5,7 +5,7 @@ import Moment from 'react-moment';
 import { Query,Mutation } from 'react-apollo';
 import {GET_ACTIVE_USER, ADD_TODO} from '../queries'
 import { Spinner,Dropdown,DropdownToggle,DropdownMenu,DropdownItem } from 'reactstrap';
-
+import {  } from "tailwindcss";
 
 class Todo extends Component {
         state = {
