@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/homescreen.css'
+import Footer from "../Footer";
 
 import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 
@@ -20,24 +21,24 @@ class HomeScreen extends Component {
                             <CardBody className="card-body">
                                 <CardTitle className="text-size">To do</CardTitle>
                                 <hr />
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                                <CardSubtitle>Prepare your work</CardSubtitle>
+                                <CardText>Get prepare all your work.</CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
                                 <CardTitle className="text-size">In Progress</CardTitle>
                                 <hr />
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+                                <CardSubtitle>Get action!</CardSubtitle>
+                                <CardText>Design,code,draw,teach whatever you want,get on them </CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
                                 <CardTitle className="text-size">Done</CardTitle>
                                 <hr />
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</CardText>
+                                <CardSubtitle>Proud yourself</CardSubtitle>
+                                <CardText>All work is done, get some rest and proud yourself</CardText>
                             </CardBody>
                         </Card>
                     </CardDeck>
@@ -90,18 +91,33 @@ class HomeScreen extends Component {
 
                 </section>
 
+                <Footer>asjkhfajshfod</Footer>
 
-
-
+                {/* 
 
                 <div className="footer text-center">
                     <ul className="icons-ul">
-                        <li className="icons-li">Hello</li>
-                        <li className="icons-li">Hello</li>
-                        <li className="icons-li">Hello</li>
-                        <li className="icons-li">Hello</li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="">Who we are?</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                        <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+
                     </ul>
-                </div>
+                    <ul className="icons-ul">
+
+                    </ul>
+
+
+                </div> */
+                }
 
 
             </div>

@@ -44,7 +44,7 @@
     padding: 20px;
     left: 0;
     bottom: 0;
-    height: 150px;
+    height: 100px;
     width: 100%;
 }
 .icons-ul{
@@ -52,6 +52,7 @@
 }
 .icons-li{
     display: inline-block;
+    margin: 10px;
 }
 .card-deck{
     width: 75%;

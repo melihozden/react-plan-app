@@ -1,32 +1,23 @@
 import React, { Component } from 'react';
-
-var style = {
-    backgroundColor: "#F8F8F8",
-    textAlign: "center",
-    padding: "20px",
-    position: "fixed",
-    left: "0",
-    bottom: "0",
-    height: "30px",
-    width: "100%",
-    background: "rgba(0, 0, 0, 0.5)"
-}
-
-var phantom = {
-  display: 'block',
-  padding: '20px',
-  width: '100%',
-}
+import "../css/footer.css"
 
 class Footer extends Component {
     render() {
         return (
-            <div>
-            <div style={phantom} />
-            <div style={style}>
-                asşmfaskmfafamfasmfampo
+            <div className="footer text-center">
+                <ul className="icons-ul">
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Github</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">About us</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Career</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Terms</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Privacy Policy</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Cookies</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Developers</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Settings</a></li>
+                    <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">© 2019 PlanApp</a></li>
+                </ul>
+                <div className="product">PlanApp is product of Diver Technology</div>
             </div>
-        </div>
         );
     }
 }
