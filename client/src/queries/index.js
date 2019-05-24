@@ -1,4 +1,4 @@
-const {gql} = require('apollo-boost');
+const { gql } = require('apollo-boost');
 //user mutation
 export const CREATE_USER = gql`
 mutation($fullname:String! $email:String! $password:String!) {
@@ -98,7 +98,7 @@ mutation($progressplan:String!  $userId:ID!) {
 export const ADD_DONE = gql`
 mutation($doneplan:String!  $userId:ID!) {
   createDone(
-    data: {donePlan:$doneoplan, userId:$userId})
+    data: {donePlan:$doneplan, userId:$userId})
      {
     id
   }

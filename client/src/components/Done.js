@@ -5,11 +5,10 @@ import Moment from 'react-moment';
 import { Query, Mutation } from 'react-apollo';
 import { GET_ACTIVE_USER, ADD_DONE } from '../queries/index';
 
-
 class Done extends Component {
     state = {
         isHidden: true,
-        todoplan: '',
+        doneplan: '',
         userId: ''
     }
     toggleHidden = () => {
@@ -23,15 +22,15 @@ class Done extends Component {
         })
     }
     formValidate = () => {
-        const { todoplan } = this.state
-        return !todoplan
+        const { doneplan } = this.state
+        return !doneplan
     }
-    onSubmit = (e, addTodo) => {
+    onSubmit = (e, addDone) => {
         e.preventDefault();
         if (!this.formValidate()) {
-            addTodo().then(({ data }) => {
+            addDone().then(({ data }) => {
                 this.setState({
-                    todoplan: ''
+                    doneplan: ''
                 })
             })
         }
@@ -46,7 +45,7 @@ class Done extends Component {
         return (
             <div className="outdiv">
                 <div className="div-header">
-                    <span className="quantity">{this.props.quantity}</span> In Progress
+                    <span className="quantity">{this.props.quantity}</span> Dones
                     <button className="form-button"><i class="fas fa-ellipsis-h fa-2x"></i></button>
                     <button className="form-button" onClick={this.toggleHidden}><i className="fas fa-plus fa-2x"></i></button>
                     <Mutation mutation={ADD_DONE} variables={{ ...this.state }} refetchQueries={[{ query: GET_ACTIVE_USER }]}>
@@ -55,7 +54,7 @@ class Done extends Component {
 
                                 <div className='toggleForm-div' hidden={this.state.isHidden}>
 
-                                    <textarea value={this.state.progressplan} className="textarea" name="doneplan" onChange={this.onChange} />
+                                    <textarea value={this.state.doneplan} className="textarea" name="doneplan" onChange={this.onChange} />
                                     <div className="button-group">
                                         <input value="Add" type="submit" className="add-button" onClick={e => {
                                             this.onSubmit(e, addDones)
@@ -74,20 +73,20 @@ class Done extends Component {
                             if (this.props.quantity === 0) {
                                 return (
                                     <div className="no-content">
-                                        There is no in progress plan<i class="far fa-frown fa-2x"></i>
+                                        There is no done plan<i class="far fa-frown fa-2x"></i>
                                     </div>
                                 )
                             }
                             // Maybeee error check later
-                            if (loading) return <div>Loading Progresses</div>
-                            if (error) return <div>Progresses Error</div>
+                            if (loading) return <div>Loading Done</div>
+                            if (error) return <div>Done Error</div>
                             console.log(data)
                             return (
                                 <div className="new-div">
                                     <div className="ul-field" id="ul-deger">
                                         {
                                             // https://yuilibrary.com/yui/docs/dd/scroll-list.html
-                                            data.activeUser.progresses.map(done => (
+                                            data.activeUser.dones.map(done => (
                                                 <div className="out-div-li">
                                                     <span className="li-menu">
                                                         <button className="li-menu-top-right-button"><i class="fas fa-ellipsis-h fa-lg"></i></button>

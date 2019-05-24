@@ -68,7 +68,7 @@ class Login extends Component {
                 this.handleSubmit(e, signinUser)
               }}>
                 {loading && <div>loading...</div>}
-                {error && <Error error={error} />}
+                {error && <div className="error"><Error error={error} /></div>}
                 <div className="u-form-group">
                   <input className="login-email-text" value={email} type="email" name="email" placeholder="abc@example.com" onChange={this.handleChange} autoComplete="true" />
                 </div>

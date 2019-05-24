@@ -2,7 +2,12 @@ import React from 'react';
 import '../css/error.css'
 
 const Error = props => {
-    const {message} = props.error
+    let { message } = props.error
+    if (message === "GraphQL error: User already exists.") {
+        message = "User Already Exists"
+    }
+
+
     // console.log(props)
     return (
         <div className="error-design">
