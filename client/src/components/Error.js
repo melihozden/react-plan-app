@@ -6,8 +6,9 @@ const Error = props => {
     if (message === "GraphQL error: User already exists.") {
         message = "User Already Exists"
     }
-
-
+    else if(message === "GraphQL error: User could not find!") {
+        message = "User could not find"
+    }
     // console.log(props)
     return (
         <div className="error-design">
