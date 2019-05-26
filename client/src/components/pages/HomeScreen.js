@@ -19,26 +19,26 @@ class HomeScreen extends Component {
                     <CardDeck className="card-deck">
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="text-size">To do</CardTitle>
+                                <CardTitle className="s-42">To do</CardTitle>
                                 <hr />
-                                <CardSubtitle>Prepare your work</CardSubtitle>
-                                <CardText>Get prepare all your work.</CardText>
+                                <CardSubtitle className="s-24">Prepare your work</CardSubtitle>
+                                <CardText className="s-18 ">Get prepare all your work.</CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="text-size">In Progress</CardTitle>
+                                <CardTitle className="s-42">In Progress</CardTitle>
                                 <hr />
-                                <CardSubtitle>Get action!</CardSubtitle>
-                                <CardText>Design,code,draw,teach whatever you want,get on them </CardText>
+                                <CardSubtitle className="s-24">Get action!</CardSubtitle>
+                                <CardText className="s-18 ">Design,code,draw,teach whatever you want,get on them </CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="text-size">Done</CardTitle>
+                                <CardTitle className="s-42">Done</CardTitle>
                                 <hr />
-                                <CardSubtitle>Proud yourself</CardSubtitle>
-                                <CardText>All work is done, get some rest and proud yourself</CardText>
+                                <CardSubtitle className="s-24">Proud yourself</CardSubtitle>
+                                <CardText className="s-18 ">All work is done, get some rest and proud yourself</CardText>
                             </CardBody>
                         </Card>
                     </CardDeck>

@@ -70,6 +70,29 @@
 .card-body{
     padding : 0px;
 }
-.text-size{
-    font-size: 28px;
+/* Font Families */
+.f-1{
+
+}
+.f-2{
+
+}
+.f-3{
+
+}
+/* Font-sizes */
+.s-12{
+    font-size: 12px;
+}
+.s-18{
+font-size: 18px;
+}
+.s-24{
+font-size: 24px;
+}
+.s-36{
+font-size: 36px;
+}
+.s-42{
+font-size: 42px;
 }
