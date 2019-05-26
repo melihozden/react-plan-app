@@ -1,6 +1,28 @@
 .center{
     text-align: center;  
 }
+.m-10{
+    margin : 10px;
+}
+.m-5{
+    margin : 5px;
+}
+.w-100{
+   font-weight: 100 
+}
+.w-200{
+    font-weight: 200
+}
+.w-300{
+    font-weight: 300
+}
+.w-400{
+    font-weight: 400
+}
+.w-500{
+    font-weight: 500
+}
+
 
 .forgot-group{
     width: 50%;
@@ -12,4 +34,15 @@
 .forgot-email{
     width: 400px;
     border-radius: 10px;
+    border: 2px solid gray; 
+    background-color: transparent;
+}
+.resetbutton{
+    margin-top:-10px;
+    width: 30%;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border:none;
+    background-color: blue;
 }

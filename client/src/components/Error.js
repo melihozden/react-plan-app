@@ -6,8 +6,11 @@ const Error = props => {
     if (message === "GraphQL error: User already exists.") {
         message = "User Already Exists"
     }
-    else if(message === "GraphQL error: User could not find!") {
+    else if (message === "GraphQL error: User could not find!") {
         message = "User could not find"
+    }
+    else if (message === "GraphQL error: Password is wrong!") {
+        message = "Password is wrong, please try again"
     }
     // console.log(props)
     return (
