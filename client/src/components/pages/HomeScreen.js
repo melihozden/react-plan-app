@@ -19,26 +19,26 @@ class HomeScreen extends Component {
                     <CardDeck className="card-deck">
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="s-42">To do</CardTitle>
+                                <CardTitle className="s-42 f-1">To do</CardTitle>
                                 <hr />
-                                <CardSubtitle className="s-24">Prepare your work</CardSubtitle>
-                                <CardText className="s-18 ">Get prepare all your work.</CardText>
+                                <CardSubtitle className="s-24 f-1">Prepare your work</CardSubtitle>
+                                <CardText className="s-18  f-1">Get prepare all your work.</CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="s-42">In Progress</CardTitle>
+                                <CardTitle className="s-42 f-1">In Progress</CardTitle>
                                 <hr />
-                                <CardSubtitle className="s-24">Get action!</CardSubtitle>
-                                <CardText className="s-18 ">Design,code,draw,teach whatever you want,get on them </CardText>
+                                <CardSubtitle className="s-24 f-1">Get action!</CardSubtitle>
+                                <CardText className="s-18  f-1">Design,code,draw,teach whatever you want,get on them </CardText>
                             </CardBody>
                         </Card>
                         <Card>
                             <CardBody className="card-body">
-                                <CardTitle className="s-42">Done</CardTitle>
+                                <CardTitle className="s-42 f-1">Done</CardTitle>
                                 <hr />
-                                <CardSubtitle className="s-24">Proud yourself</CardSubtitle>
-                                <CardText className="s-18 ">All work is done, get some rest and proud yourself</CardText>
+                                <CardSubtitle className="s-24 f-1">Proud yourself</CardSubtitle>
+                                <CardText className="s-18  f-1">All work is done, get some rest and proud yourself</CardText>
                             </CardBody>
                         </Card>
                     </CardDeck>

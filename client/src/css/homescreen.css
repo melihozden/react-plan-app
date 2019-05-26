@@ -9,7 +9,7 @@
     padding:0px;
     position: relative;
     width: 100% ;
-    height: 500px;
+    height: 510px;
    background: #2b2e3b;
 }
 .top{
@@ -72,7 +72,7 @@
 }
 /* Font Families */
 .f-1{
-
+    font-family: 'Sarabun', sans-serif;
 }
 .f-2{
 
