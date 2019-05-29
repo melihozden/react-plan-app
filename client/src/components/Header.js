@@ -30,8 +30,8 @@ const LinkWithUnLogin = () => (
     <Fragment>
         <div className="rightLoginRegister">
             {/* <NavLink className="navlink" to="/">Home</NavLink> */}
-            <NavLink className="navlink-login" to="/login">Login</NavLink>
-            <NavLink className="navlink-register" to="/register">Register</NavLink>
+            <NavLink className="navlink-login" to="/login">Sign in</NavLink>
+            <NavLink className="navlink-register" to="/register">Sign up</NavLink>
             {/* <i class="fab fa-github fa-lg"></i> */}
         </div>
     </Fragment>

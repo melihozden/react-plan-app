@@ -61,7 +61,7 @@ class Login extends Component {
       <div className="login-box-2">
         <div className="login-div">
           <img className="logo-des" src={logo2} alt="logo" height="50" width="75" />
-          <h3 className="title">Welcome to Planet App</h3>
+          <h3 className="title">Sign in to PlanApp</h3>
           <Mutation mutation={SIGNIN_USER} variables={{ email, password }}>
             {(signinUser, { loading, error }) => (
               <form className="email-login" onSubmit={e => {

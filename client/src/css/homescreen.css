@@ -2,15 +2,13 @@
     margin: 0px;
     padding: 0px;
     display: inline;
-    
 }
 .enter{
     margin : 0px; 
     padding:0px;
-    position: relative;
+    position: absolute;
     width: 100% ;
-    height: 510px;
-   background: #2b2e3b;
+   background: #282e44;
 }
 .top {
     height: 10em;
@@ -41,11 +39,7 @@
 .w-color{
     color: #fff; 
 }
-.jumbotron{
-    margin : 0px; 
-    padding:0px;
-    width: 100% ;
-}
+
 .text-center{
     text-align: center;
 }

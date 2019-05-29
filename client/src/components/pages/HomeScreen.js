@@ -10,7 +10,7 @@ class HomeScreen extends Component {
             <div className="out">
                 <section className="enter top xxl-text white text-center">
                     <p className="enter-title text-center">
-                        Planing for productivity
+                        Planing For Productivity
                         </p>
                 </section>
                 <section className="inline text-center">
