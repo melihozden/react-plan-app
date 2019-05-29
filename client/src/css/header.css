@@ -1,4 +1,7 @@
 .horizontal_menu{
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
     padding: 10px;
     height: 75px ;
     background: rgb(24, 24, 24);

@@ -12,9 +12,20 @@
     height: 510px;
    background: #2b2e3b;
 }
-.top{
+.top {
+    height: 10em;
+    position: relative
+ }
+.enter-title{
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+ }
+/* .top{
     margin-top: 0px;
-}
+} */
 .xxl-text{
     font-size: 72px
 }

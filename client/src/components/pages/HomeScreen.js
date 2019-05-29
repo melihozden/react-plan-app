@@ -8,11 +8,10 @@ class HomeScreen extends Component {
     render() {
         return (
             <div className="out">
-                <section className="enter">
-                    <div className="top xxl-text white text-center">
+                <section className="enter top xxl-text white text-center">
+                    <p className="enter-title text-center">
                         Planing for productivity
-                        <p className="w-color margining s-text text-center">Plan your works</p>
-                    </div>
+                        </p>
                 </section>
                 <section className="inline text-center">
 
