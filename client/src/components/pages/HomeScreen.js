@@ -4,6 +4,10 @@ import Footer from "../Footer";
 
 import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
 
+//mentor website designing
+//https://demo.bootstrapious.com/foliou/2-0-1/ 
+//https://bootstrapious.com/p/landy
+
 class HomeScreen extends Component {
     render() {
         return (
