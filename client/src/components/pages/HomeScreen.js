@@ -7,6 +7,7 @@ import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } 
 //mentor website designing
 //https://demo.bootstrapious.com/foliou/2-0-1/ 
 //https://bootstrapious.com/p/landy
+//https://demo.bootstrapious.com/landy/1-0/  live preview
 
 class HomeScreen extends Component {
     render() {
@@ -15,7 +16,12 @@ class HomeScreen extends Component {
                 <section className="enter top xxl-text white text-center">
                     <p className="enter-title text-center">
                         Planing For Productivity
-                        </p>
+                    </p>
+                <button className="">About Us</button>
+                </section>
+                {/* second section */}
+                <section>
+
                 </section>
                 <section className="inline text-center">
 

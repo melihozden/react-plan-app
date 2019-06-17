@@ -16,7 +16,7 @@ class Footer extends Component {
                     <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">Settings</a></li>
                     <li className="icons-li"><a href="https://github.com/melihozden/react-plan-app">© 2019 PlanApp</a></li>
                 </ul>
-                <div className="product">PlanApp is product of Diver Technology</div>
+                <div className="product fs-1">PlanApp is a product of Diver Technology</div>
             </div>
         );
     }
