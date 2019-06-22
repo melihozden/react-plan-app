@@ -1,5 +1,5 @@
 .horizontal_menu{
-    position: sticky !important;
+    position: relative;
     top: 0;
     width: 100%;
     padding: 10px;
@@ -68,13 +68,12 @@
 }
 
 .activeNavLink{
+    text-align: center;
     color: white;
     text-decoration: none !important;
-    margin : 10px;
     margin-right: 30px;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace ;
-    float: right;
 }
 .activeNavLink:hover{
     color:whitesmoke;

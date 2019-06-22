@@ -3,7 +3,7 @@ import Todo from '../Todo';
 import Progress from '../Progress';
 import Done from '../Done';
 import Moment from 'react-moment';
-import { Alert } from 'react-bootstrap';
+import { Alert } from 'reactstrap';
 import '../../css/profile.css'
 
 // import { Query } from 'react-apollo';
@@ -13,15 +13,22 @@ import auth from '../auth';
 
 const Profile = ({ session }) => (
     <div>
-        <Alert dismissible variant="info">
+        {/* <Alert dismissible variant="info">
             <Alert.Heading className="center">Oh snap! You didn't activate account yet!</Alert.Heading>
             <p className="center">
                 Please activate your account. We sent you a mail to activate it.
             </p>
+        </Alert> */}
+        
+        <Alert color="primary center">
+            <h4 className="alert-heading center">Ohh Snap! You didn't activate account yet</h4>
+             Please activate your account. We sent you a mail to activate it.
         </Alert>
-        <div className="welcome-div">
+        
+        
+        {/* <div className="welcome-div">
             Welcome back {session.activeUser.fullname}
-        </div>
+        </div> */}
         <div className="createdat-div">
             Created At : <Moment date={session.activeUser.createdAt} format="DD/MM/YYYY" />
         </div>

@@ -5,6 +5,9 @@ import mainlogo from '../images/whitetrans2x.png';
 import '../css/header.css';
 import Logout from './Logout'
 import Settings from './Settings'
+
+import { Nav, NavItem } from 'reactstrap';
+
 const Header = ({ session }) => {
     //console.log(session)
     return (
@@ -19,23 +22,39 @@ const Header = ({ session }) => {
 const LinkWithLogin = ({ session }) => (
     <Fragment>
         <div className="activeRightHeader">
+        <Nav>
+
+          <NavItem>
             <NavLink className="activeNavLink" to="/profile">sign in with {session.activeUser.fullname}</NavLink>
-            <Settings />
+          </NavItem>
+
+          {/* <NavItem>
+              <Settings />
+          </NavItem> */}
+
+          <NavItem>
             <Logout />
-        </div>
+          </NavItem>
+        </Nav>
+      </div>
+
+
     </Fragment>
 )
 
 const LinkWithUnLogin = () => (
     <Fragment>
         <div className="rightLoginRegister">
-            {/* <NavLink className="navlink" to="/">Home</NavLink> */}
+        <Nav>
+          <NavItem>
             <NavLink className="navlink-login" to="/login">Sign in</NavLink>
+          </NavItem>
+          <NavItem>
             <NavLink className="navlink-register" to="/register">Sign up</NavLink>
-            {/* <i class="fab fa-github fa-lg"></i> */}
-        </div>
+          </NavItem>
+        </Nav>
+      </div>
     </Fragment>
-
 )
 
 

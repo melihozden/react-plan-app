@@ -1,6 +1,5 @@
 import React from 'react';
 import {ApolloConsumer} from 'react-apollo';
-import '../css/profile.css';
 import { withRouter } from 'react-router-dom';
 import '../css/logout.css' ;
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../css/homescreen.css'
 import Footer from "../Footer";
 
-import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText, CardImg } from 'reactstrap';
+import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 
 //mentor website designing
 //https://demo.bootstrapious.com/foliou/2-0-1/ 

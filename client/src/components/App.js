@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom'
 //css
 import '../css/App.css';
-
 import SessionWrapperHOC from './SessionWrapperHOC';
 //pages
 import Login from './pages/Login';
