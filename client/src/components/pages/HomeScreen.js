@@ -13,15 +13,17 @@ class HomeScreen extends Component {
     render() {
         return (
             <div className="out">
-                <section className="enter top xxl-text white text-center">
-                    <p className="enter-title text-center">
-                        Planing For Productivity
-                    </p>
-                <button className="">About Us</button>
-                </section>
-                {/* second section */}
-                <section>
+                {/* Section 1 Landing Page */}
 
+
+                
+
+
+
+
+                {/* section 2 (About Us)*/}
+                <section className="inline text-center">
+                   <h4>About Us</h4>
                 </section>
                 <section className="inline text-center">
 
