@@ -1,38 +1,72 @@
-.horizontal_menu{
-    position: relative;
-    top: 0;
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+nav{
     width: 100%;
-    padding: 10px;
-    height: 75px ;
-    background: rgb(24, 24, 24);
+    background-color: #000;
+    color: #fff ;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    /* position: fixed; */
+}
+a{
+    text-decoration: none;  
+}
+ul{
+    list-style-type: none;
+}
+.clearfix::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.container{
+    width: 1525px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+.horizontal_menu{
+    width: 1525px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
 }
 .navlink-login{
     color: white;
     text-decoration: none !important;
-    margin : 3px;
     padding : 10px;    
     font-size: 16px;
     /* font-family: 'Courier New', Courier, monospace ; */
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(40, 79, 117) ;
-    border: 1px solid rgb(40, 79, 117);
+    background-color: #284f75 ;
+    border: 1px solid #284f75;
     border-radius: 5px;
 }
 .navlink-login:hover{
     color : whitesmoke; 
 }
 .navlink-register{
-    color: white;
+    width: 15rem;
+    text-align: center;
+    color: #7c1616;
     text-decoration: none !important;
-    margin : 3px;
+    margin-left : 2rem;
     padding : 10px;    
     font-size: 16px;
     /* font-family: 'Courier New', Courier, monospace ; */
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(124, 22, 22) ;
-    border: 1px solid rgb(124, 22, 22) ;
+    background-color: #7c1616 ;
+    border: 1px solid #7c1616 ;
     border-radius: 5px;
 }
 .navlink-register:hover{
@@ -62,9 +96,7 @@
     font-weight: bold;
 }
 .mainlogo{
-    align-content: center ;
-    margin: 5px;
-    float: left;
+    padding-top: 2rem;
 }
 
 .activeNavLink{
@@ -78,3 +110,31 @@
 .activeNavLink:hover{
     color:whitesmoke;
 }
+
+/* New Version */
+#logo-box{
+    float:left; 
+    padding-top: .5rem;
+}
+#logo-box .logo{
+    color: #fff ;
+    font-weight: 700; 
+    font-size: 3.2rem;
+}
+#nav-links{
+    float: right;
+}
+#nav-links .nav-item{
+    float : left ;
+    margin: .4rem;
+}
+#nav-links .nav-link{
+    color: #fff ;
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: block;
+    padding: 1.6rem;
+    letter-spacing: .1rem;
+}
+
+

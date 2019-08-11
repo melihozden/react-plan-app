@@ -14,7 +14,12 @@ class HomeScreen extends Component {
         return (
             <div className="out">
                 {/* Section 1 Landing Page */}
-
+                <header>
+                    <div class="container">
+                        {/* <img src="img/whitetrans.png" id="profile-image" class="img-fluid"> */}
+                        <h1>Freelancing is your destiny</h1>
+                    </div>
+                </header>
 
                 
 
@@ -22,7 +27,7 @@ class HomeScreen extends Component {
 
 
                 {/* section 2 (About Us)*/}
-                <section className="inline text-center">
+                {/* <section className="inline text-center">
                    <h4>About Us</h4>
                 </section>
                 <section className="inline text-center">
@@ -54,7 +59,7 @@ class HomeScreen extends Component {
                         </Card>
                     </CardDeck>
 
-                </section>
+                </section> */}
 
                 <section>
                     <p>

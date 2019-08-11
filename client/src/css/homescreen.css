@@ -1,7 +1,17 @@
+header{
+    background-color: #0f4b7c;
+    height: 775px;
+    padding-top:calc(145px + 10rem)  ;
+    padding-bottom: 145px ;
+    text-align: center;
+}
 .out{
     margin: 0px;
     padding: 0px;
     display: inline;
+}
+.container{
+
 }
 .enter{
     margin : 0px; 
