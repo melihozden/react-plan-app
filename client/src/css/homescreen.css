@@ -77,7 +77,7 @@ header{
     text-align: center;
 }
 .card{
-    background-color: rgb(238, 241, 241) !important ;
+    background-color: transparent !important ;
     border : none;
     margin : 30px auto;
     height: 200px;
