@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import mainlogo from '../images/whitetrans2x.png';
 //css 
 import '../css/header.css';
 import Logout from './Logout'
 // import Settings from './Settings'
 
-import { Nav, NavItem } from 'reactstrap';
+// import { Nav, NavItem } from 'reactstrap';
 
 const Header = ({ session }) => {
     //console.log(session)

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../css/homescreen.css'
 import Footer from "../Footer";
 
-import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
+// import { CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 
 //mentor website designing
 //https://demo.bootstrapious.com/foliou/2-0-1/ 
@@ -20,11 +20,18 @@ class HomeScreen extends Component {
                         <h1>Freelancing is your destiny</h1>
                     </div>
                 </header>
-
-                
-
-
-
+                <section>
+                    <div className="about">
+                        <h1>About Us</h1>
+                    <div className="longtext">
+                        <h3>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, cumque labore corrupti magnam aliquid molestiae a minus ducimus earum porro molestias? Nemo reprehenderit eligendi optio praesentium nostrum et, harum repellat?
+                            In itaque eaque ratione labore quis laborum sequi amet libero deleniti rerum. Odio excepturi, iste blanditiis asperiores illo vitae sequi ipsam veritatis esse! Molestias dolorem quam quasi ex tempore provident?
+                            Recusandae voluptates enim reiciendis excepturi exercitationem culpa corrupti, eum praesentium neque quidem fuga fugiat, incidunt voluptatem. A explicabo dicta voluptas incidunt quae? Quidem animi reprehenderit est. Temporibus facilis nihil ratione!
+                        </h3>
+                    </div>
+                    </div>
+                </section>
 
                 {/* section 2 (About Us)*/}
                 {/* <section className="inline text-center">
