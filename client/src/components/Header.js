@@ -12,19 +12,17 @@ import Logout from './Logout'
 const Header = ({ session }) => {
     //console.log(session)
     return (
-      <nav>
-        <div>
+        <div className="outer-div">
             {
               session.activeUser ? <LinkWithLogin session={session} /> : <LinkWithUnLogin />
             }
         </div>
-      </nav>
     );
 }
 const LinkWithLogin = ({ session }) => (
     <Fragment>
       
-        <div class="container clearfix">
+        <div class="container">
           <div id="logo-box">
                 <a href="/" class="logo">
                     <img src={mainlogo} alt="Freelancer" />
@@ -63,19 +61,16 @@ const LinkWithLogin = ({ session }) => (
 
 const LinkWithUnLogin = () => (
     <Fragment>
-        <div class="container clearfix">
+        <div className="container">
           <div id="logo-box">
-            <a href="/" class="logo">
+            <a href="/" className="logo">
               <img src={mainlogo} alt="Freelancer"/>
             </a>
           </div>
         <div id="nav-links">
             <ul>
                 <li class="nav-item">
-                    <a href="#" className="nav-link text-uppercase">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/login" className="nav-link navlink-login" to="/login">Login</a>
+                    <a href="/login" className="nav-link" to="/login">Login</a>
                 </li>
                 <li class="nav-item">
                     <a href="/register" className="nav-link navlink-register" to="/register">Join</a>

@@ -22,7 +22,8 @@ import ForgotPassword from './pages/ForgotPassword';
 const Root = ({ refetch, session }) => (
   <Router>
     <Fragment>
-      <Header session={session} />
+      {/* Props given down */}
+      <Header session={session} />  
       <Switch>
         {/* <Link to="/login">Login</Link><br/><br/>
       <Link to="/register">Register</Link> */}

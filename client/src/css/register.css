@@ -1,4 +1,8 @@
-  
+*{
+  padding: 0px;
+  margin: 0px ;
+  box-sizing: border-box;
+}
 .login-box{
     margin: 50px auto;
     width: 350px;
